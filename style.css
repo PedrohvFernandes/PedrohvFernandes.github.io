@@ -494,6 +494,10 @@ fieldset.grupo .campo{
   background: rgb(138, 135, 135);
 }
 
+.campo textarea{
+  resize: vertical
+}
+
 .botao-enviar{
   font-size: 1.2em;
   background: #fff;
@@ -539,9 +543,6 @@ fieldset.grupo .campo{
   .campo input[type="text"], .campo input[type="email"], .campo textarea{
     height: 35px;
     width: 235px;
-  }
-  .campo textarea{
-    resize: vertical
   }
 
   .campo input[type="file"]{

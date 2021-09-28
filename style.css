@@ -20,39 +20,60 @@ body{
 }
 
 /*Estilo Menu*/
+header{
+  display: flex;
+  justify-content: flex-end;
+}
 
 .navegacao-links-cabecalho{
   background: rgb(8, 8, 8);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 7vh;
   position: fixed;
-  top:5px;
-  right: 0;
-  opacity: 90%;
 }
+
 
 .links{
   list-style: none;
   margin:0;
   padding: 0;
   display:flex;
-  justify-content: center;
+}
+
+.links li{
+  letter-spacing: 3px;
+  margin-left: 32px;
 }
 
 nav a{
   text-decoration: none;
-  /*Essa propriedade permite deixar um elemento do lado do outro(inline) e ao mesmo tempo setar largura e altura(block)
-    display:inline-block*/
-  display: flex;
-  align-items: center;
-  padding: 1em;
+  transition: 0.3s;
   color: rgb(202, 3, 3);
   font-size: 120%;
 }
+
+.mobile-menu{
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div{
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
 
 /*Mudança de estado do elemento*/
 nav a:hover{
   background-color: #555;
   color: #fff;
   border-radius: 5px;
+  padding: 1em;
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -o-transform: scale(1.2);
@@ -63,9 +84,59 @@ nav a:hover{
 /*Responsividade menu*/
 @media(max-width:1450px){
   .navegacao-links-cabecalho{
-    display:none;
+    position: relative;
+  }
+  .links{
+    position: absolute;
+    top:7vh;
+    right: 0;
+    width: 65vw;
+    height: 92vh;
+    background: rgb(8, 8, 8);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(105%);
+    transition:  transform 0.3s ease-in;
+    
   }
 
+  .links li{
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu{
+    display: block;
+  }
+
+}
+
+.links.active{
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1{
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2{
+  opacity: 0;
+}
+
+.mobile-menu.active .line3{
+  transform: rotate(45deg) translate(-5px, -7px);
 }
 
 /*Estilo home*/
@@ -395,6 +466,11 @@ body #items-wrapper{
 #items-wrapper{
   width: 88vw;
 }
+
+.item{
+  width: 102%;
+}
+
 .subtitle-projetos{
   align-self: center;
 }
@@ -405,18 +481,31 @@ body #items-wrapper{
   width: 80vw;
 }
 
+.item{
+  width: 102%;
+}
+
 .subtitle-projetos{
   align-self: center;
 }
 }
 @media(max-width:360px){
   #items-wrapper{
-  width: 90vw;
+    width: 80vw;
   }
+
+  .item{
+    width: 102%;
+  }
+
 }
 @media(max-width:306px){
   #items-wrapper{
   width: 115vw;
+  }
+
+  .item{
+    width: 102%;
   }
   .subtitle-projetos{
     align-self: center;

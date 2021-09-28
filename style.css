@@ -463,55 +463,58 @@ body #items-wrapper{
 }
 /*Responsivo projetos*/
 @media(max-width:640px){
-#items-wrapper{
-  width: 88vw;
-}
-
-.item{
-  width: 102%;
-}
-
-.subtitle-projetos{
-  align-self: center;
-}
-}
-
-@media(max-width:411px){
-#items-wrapper{
-  width: 80vw;
-}
-
-.item{
-  width: 102%;
-}
-
-.subtitle-projetos{
-  align-self: center;
-}
-}
-@media(max-width:360px){
+  #items-wrapper{
+    width: 88vw;
+  }
+  
+  .item{
+    width: 102%;
+  }
+  
+  .projects-descrition{
+    align-self: center;
+  }
+  }
+  
+  @media(max-width:411px){
   #items-wrapper{
     width: 80vw;
   }
-
-  .item{
-    width: 102%;
-  }
-
-}
-@media(max-width:306px){
-  #items-wrapper{
-  width: 115vw;
-  }
-
-  .item{
-    width: 102%;
-  }
-  .subtitle-projetos{
+  
+  .projects-descrition{
     align-self: center;
   }
-
-}
+  
+  }
+  
+  @media(max-width:306px){
+    #items-wrapper{
+    width: 115vw;
+    }
+    
+    .item{
+    width: 102%;
+    }
+  
+    .projects-descrition{
+      align-self: center;
+    }
+  }
+  
+  @media(max-width:280px){
+    #items-wrapper{
+      width: 75vw;
+      }
+      
+    .item{
+      width: 102%;
+      }
+  
+    .projects-descrition{
+      align-self: center;
+      margin-left: 0.5em;
+      }
+  }
 
 /*Style vagas*/
 
@@ -633,17 +636,11 @@ fieldset.grupo .campo{
     height: 35px;
     width: 235px;
   }
-
-  .campo input[type="file"]{
-    width: 90%;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-
+  
   legend{
     font-size:25px;
   }
-
+  
   .campo label{
     margin-bottom: 0.2em;
     color: #fff;
@@ -651,12 +648,26 @@ fieldset.grupo .campo{
   }
   
   .botao-apagar{
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
   }
-
-}
-
+  
+  }
+  @media(max-width:280px){
+    form{
+      margin:0em;
+      padding: 0;
+    }
+    .campo input[type="text"], .campo input[type="email"], .campo textarea{
+      height: 35px;
+      width: 205px;
+    }
+    .div-vagas-titulos{
+      margin-bottom: 2em;
+      text-align: center;
+    }
+  }
+  
 /*Style footer*/
  footer{
    display: flex;

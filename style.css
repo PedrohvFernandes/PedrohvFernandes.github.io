@@ -3,8 +3,10 @@ body, html{
   background: #333;
   /*Se algo trasbordar fica escondido do body*/
   overflow-x: hidden;
+  /*RESETANDO CSS PADRÃO DO NAVEGADOR*/
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 *{
@@ -258,6 +260,13 @@ div a{
   align-items: flex-start;
   
   }
+
+.hero-title{
+  font-size: 50px;
+}
+.hero-subtitle{
+  font-size: 40px;
+}
 .div-programador{
   align-self: center;
   margin-left: 0;
@@ -660,7 +669,7 @@ fieldset.grupo .campo{
   }
   
   }
-  @media(max-width:280px){
+  @media(max-width:320px){
     form{
       margin:0em;
       padding: 0;
@@ -689,8 +698,9 @@ fieldset.grupo .campo{
   footer{
     font-size: 13px;
     overflow-x: hidden;
-  }
+    width: 97vw;
+    margin-bottom: 0.5em;
 }
-
+}
 
 

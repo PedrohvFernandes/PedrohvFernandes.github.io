@@ -230,37 +230,42 @@ div a{
 /*Responsividade home*/
 @media(max-width:1450px){
   .home-presentation{
-    margin-top: 0em;
-    padding: 0em;
+  margin-top: 0em;
+  padding: 0em;
   }
-  .midias-sociais{
-    padding:0em;
-    align-self: flex-start;
-    margin-top: 1em;
-    flex-wrap: wrap;
-  }
-
-  .linkedin-home{
-    width: 40px;
-    height: 40px;
-  }
-  .icons-home-section{
-    width: 40px;
-    height: 40px;
-  }
-  .encapsulamento-home-section-div{
-    align-self: flex-start;
-    
-  }
-  .home-section{
-    flex-direction: column;
-    align-items: flex-start;
-    overflow-x: hidden;
-  }
-  .div-programador{
-    align-self: center;
+.midias-sociais{
+  padding:0em;
+  align-self: flex-start;
+  margin-top: 1em;
+  flex-wrap: wrap;
   }
 
+.linkedin-home{
+  width: 40px;
+  height: 40px;
+  }
+.icons-home-section{
+  width: 40px;
+  height: 40px;
+  }
+.encapsulamento-home-section-div{
+  align-self: flex-start;
+  }
+.home-section{
+  flex-direction: column;
+  align-items: flex-start;
+  
+  }
+.div-programador{
+  align-self: center;
+  margin-left: 0;
+  width: 100%;
+  }
+  
+.div-programador img{
+  width: 100%;
+  object-fit: cover;
+ }
 }
 
 /*Style about me*/

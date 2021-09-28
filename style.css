@@ -1,8 +1,10 @@
 /*Fundo do site*/
-body{
+body, html{
   background: #333;
   /*Se algo trasbordar fica escondido do body*/
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 *{

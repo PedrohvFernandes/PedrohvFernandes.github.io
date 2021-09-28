@@ -487,7 +487,7 @@ body #items-wrapper{
     width: 102%;
   }
   
-  .projects-descrition{
+  .subtitle-projetos{
     align-self: center;
   }
   }
@@ -497,7 +497,7 @@ body #items-wrapper{
     width: 80vw;
   }
   
-  .projects-descrition{
+  .subtitle-projetos{
     align-self: center;
   }
   
@@ -512,7 +512,7 @@ body #items-wrapper{
     width: 102%;
     }
   
-    .projects-descrition{
+    .subtitle-projetos{
       align-self: center;
     }
   }
@@ -526,10 +526,11 @@ body #items-wrapper{
       width: 102%;
       }
   
-    .projects-descrition{
+    .subtitle-projetos{
       align-self: center;
-      margin-left: 0.5em;
-      }
+      font-size: 40px;
+      margin-right: 1em;
+    }
   }
 
 /*Style vagas*/

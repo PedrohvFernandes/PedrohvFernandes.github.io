@@ -94,8 +94,8 @@ nav a:hover{
     position: absolute;
     top:7vh;
     right: 0;
-    width: 65vw;
-    height: 92vh;
+    width: 75vw;
+    height: 93vh;
     background: rgb(8, 8, 8);
     flex-direction: column;
     align-items: center;

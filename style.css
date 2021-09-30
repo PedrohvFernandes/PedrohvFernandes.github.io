@@ -601,6 +601,7 @@ fieldset.grupo .campo{
 
 .campo input:focus, .campo textarea:focus{
   background: rgb(138, 135, 135);
+  outline: none;
 }
 
 .campo textarea{

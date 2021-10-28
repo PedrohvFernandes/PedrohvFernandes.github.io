@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Styles/cadastrar.css" type="text/css">
+  <title>Cadastrar</title>
+</head>
+
+<body>
+  <header>
+    <section>
+      <div class="logo-div">
+        <a href="index.html">
+          <img src="svgs/logo.svg" alt="logo com duas bolinhas moleculares azuis e cinza" class="logo">
+        </a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section>
+      <h1 class="sub-hero-title">
+        Preencha os campos abaixo para realizar o cadastro
+      </h1>
+      <!-- name -> é o nome do formulario -->
+      <form name="formuser" autocomplete="off">
+        <fieldset class="grupo">
+          <!-- Aqui o usuario ira se cadastrar enviando os seus dados para tabelas relacionais do
+          banco de dados, se o usuario ja existir apontar que a entidade daquele usuario ja existe no banco de dados 
+          e se o nome ou email ja estão cadastrados no banco de dados com php ou node-->
+          <!-- Enviar esses dados pro banco de dados de forma correta, formatada, etc -->
+          <!-- Caso a gente queria validar o cadastrar de forma mais bonitinha: Validar o cadastrar: https://www.youtube.com/watch?v=hXUQpiW9Tho 
+          no HTML e css, pois ja esta validando, mas de forma padrão  -->
+          <div class="campo">
+            <label class="label-informacoes" for="txt-nome"> Username</label>
+            <input placeholder="Informe seu Nome" type="text" name="nome" required>
+            <label class="label-informacoes" for="txt-email"> Email</label>
+            <input placeholder="Informe seu Email" type="email" name="email" required>
+            <label class="label-informacoes" for="txt-data-de-nascimento"> Data de nascimento</label>
+            <!-- o onkeydown="return false"  iria bloquear na hora da pessoa escrever a data, so poderia 
+              usar o icone de data -->
+            <!-- A limitação da data é feita pelo JS. Obs: se tirar o min ele pega todos os anos anteriores antes de 1921 -->
+            <input type="date" name="dataNascimento" min="1921-01-01" id="calendario" required> 
+            
+            <!-- onfocus="(this.type='date')" quando focar no campo ele fica como date, saiu do focus
+            fica text, com isso as data são formatadas como texto onblur="(this.type='text')" , com isso o 
+            campo não recebe a função de limitação de data -->
+            <!-- <input type="text" name="dataNascimento" placeholder="Informe sua Data de nascimento" 
+              min="1921-01-01" max="2030-12-31" onfocus="(this.type='date')"
+              onblur="(this.type='text')"  required>  -->
+
+            <label class="label-informacoes" id="senha-label" for="txt-senha"> Senha</label>
+            <div class="grupo-senha">
+              <input placeholder="Informe sua Senha" type="password" id="senha-input" name="senha">
+              <svg width="24" id="error-senha" class="error-senha" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" alt="senha não contem 9 caracteres">
+                <g clip-path="url(#clip0_1251:138)">
+                <path d="M10.8614 4.64573L2.39143 18.7857C2.2168 19.0882 2.1244 19.431 2.12342 19.7802C2.12244 20.1295 2.21292 20.4729 2.38586 20.7763C2.55879 21.0796 2.80816 21.3325 3.10914 21.5096C3.41012 21.6867 3.75223 21.7819 4.10143 21.7857H21.0414C21.3906 21.7819 21.7327 21.6867 22.0337 21.5096C22.3347 21.3325 22.5841 21.0796 22.757 20.7763C22.9299 20.4729 23.0204 20.1295 23.0194 19.7802C23.0185 19.431 22.9261 19.0882 22.7514 18.7857L14.2814 4.64573C14.1032 4.35183 13.8522 4.10885 13.5526 3.94021C13.2531 3.77158 12.9152 3.68298 12.5714 3.68298C12.2277 3.68298 11.8898 3.77158 11.5902 3.94021C11.2907 4.10885 11.0397 4.35183 10.8614 4.64573V4.64573Z" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.5714 9.78577V13.7858" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.5714 17.7858H12.5814" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1251:138">
+                <rect width="24" height="24" fill="white" transform="translate(0.571411 0.785767)"/>
+                </clipPath>
+                </defs>
+              </svg>
+              <!-- Os olhos pra mostrar e não mostrar a senha -->
+              <svg alt ="Olho da senha sem o risco indicando que a senha esta mostrando"  id="olho-aberto" class="glyphicon-eye-open" onclick="mostrarSenha(this)" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg alt ="Olho da senha com o risco indicando que a senha não esta mostrando" id="olho-fechado" class="glyphicon-eye-close" onclick="mostrarSenha(this)" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.12 14.12C13.8454 14.4148 13.5141 14.6512 13.1462 14.8151C12.7782 14.9791 12.3809 15.0673 11.9781 15.0744C11.5753 15.0815 11.1752 15.0074 10.8016 14.8565C10.4281 14.7056 10.0887 14.4811 9.80385 14.1962C9.51897 13.9113 9.29439 13.572 9.14351 13.1984C8.99262 12.8249 8.91853 12.4247 8.92563 12.0219C8.93274 11.6191 9.02091 11.2219 9.18488 10.8539C9.34884 10.4859 9.58525 10.1547 9.88 9.88003M17.94 17.94C16.2306 19.243 14.1491 19.9649 12 20C5 20 1 12 1 12C2.24389 9.68192 3.96914 7.65663 6.06 6.06003L17.94 17.94ZM9.9 4.24002C10.5883 4.0789 11.2931 3.99836 12 4.00003C19 4.00003 23 12 23 12C22.393 13.1356 21.6691 14.2048 20.84 15.19L9.9 4.24002Z" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 1L23 23" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>          
+            </div>
+            <p id="senha-errado"></p> 
+
+            <label class="label-informacoes" id="senha-novamente-label" for="sua-senha-novamente"> Sua senha novamente</label>
+            <div class="grupo-senha">
+              <input placeholder="Informe sua Senha novamente" type="password" id="senha-novamente-input" name="senha_novamente">
+              <svg width="24" id="error-senha-novamente" class="error-senha" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" alt="senha não contem 9 caracteres ou não condiz com o que foi digitado na senha anterior">
+                <g clip-path="url(#clip0_1251:138)">
+                <path d="M10.8614 4.64573L2.39143 18.7857C2.2168 19.0882 2.1244 19.431 2.12342 19.7802C2.12244 20.1295 2.21292 20.4729 2.38586 20.7763C2.55879 21.0796 2.80816 21.3325 3.10914 21.5096C3.41012 21.6867 3.75223 21.7819 4.10143 21.7857H21.0414C21.3906 21.7819 21.7327 21.6867 22.0337 21.5096C22.3347 21.3325 22.5841 21.0796 22.757 20.7763C22.9299 20.4729 23.0204 20.1295 23.0194 19.7802C23.0185 19.431 22.9261 19.0882 22.7514 18.7857L14.2814 4.64573C14.1032 4.35183 13.8522 4.10885 13.5526 3.94021C13.2531 3.77158 12.9152 3.68298 12.5714 3.68298C12.2277 3.68298 11.8898 3.77158 11.5902 3.94021C11.2907 4.10885 11.0397 4.35183 10.8614 4.64573V4.64573Z" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.5714 9.78577V13.7858" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.5714 17.7858H12.5814" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_1251:138">
+                <rect width="24" height="24" fill="white" transform="translate(0.571411 0.785767)"/>
+                </clipPath>
+                </defs>
+              </svg>
+              <svg alt ="Olho da senha sem o risco indicando que a senha esta mostrando" id="olho-aberto-novamente" class="glyphicon-eye-open" onclick="mostrarSenhaNovamente(this)" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg alt ="Olho da senha com o risco indicando que a senha não esta mostrando" id="olho-fechado-novamente" class="glyphicon-eye-close" onclick="mostrarSenhaNovamente(this)" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.12 14.12C13.8454 14.4148 13.5141 14.6512 13.1462 14.8151C12.7782 14.9791 12.3809 15.0673 11.9781 15.0744C11.5753 15.0815 11.1752 15.0074 10.8016 14.8565C10.4281 14.7056 10.0887 14.4811 9.80385 14.1962C9.51897 13.9113 9.29439 13.572 9.14351 13.1984C8.99262 12.8249 8.91853 12.4247 8.92563 12.0219C8.93274 11.6191 9.02091 11.2219 9.18488 10.8539C9.34884 10.4859 9.58525 10.1547 9.88 9.88003M17.94 17.94C16.2306 19.243 14.1491 19.9649 12 20C5 20 1 12 1 12C2.24389 9.68192 3.96914 7.65663 6.06 6.06003L17.94 17.94ZM9.9 4.24002C10.5883 4.0789 11.2931 3.99836 12 4.00003C19 4.00003 23 12 23 12C22.393 13.1356 21.6691 14.2048 20.84 15.19L9.9 4.24002Z" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 1L23 23" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>     
+            </div>
+            <p id="senha-errado-novamente"></p> 
+          </div>
+        </fieldset>
+        <button type="submit" formaction="sucesso-cadastro.html" class="botao-cadastrar" onclick="return cadastrar()"> Cadastrar </button>
+      </form>
+
+    </section>
+  </main>
+  <script src="Scripts/login-cadastrar.js"></script>
+</body>
+
+</html>

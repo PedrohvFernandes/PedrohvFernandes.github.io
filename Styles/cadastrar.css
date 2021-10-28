@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'HelveticaNeue';
+}
+
+body{
+  background-color: #f7f7f7;
+}
+
+a{
+  text-decoration: none;
+}
+
+/*Logo do diseasy*/
+.logo-div{
+  display: flex;
+  justify-content: center;
+  background-color: #2683f2;
+ 
+}
+
+/*Preencher os campos*/
+.sub-hero-title{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #4F4F4F;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+/*Campos*/
+form{
+  margin:0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+fieldset{
+  border: 0;
+}
+
+input, button{
+  border: 5px;
+}
+.campo{
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.campo label{
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  align-self: flex-start;
+  color: #4F4F4F;
+  font-size: 21px;
+  font-family: 'HelveticaNeue';
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo input[type="password"]{
+  padding: 0 10px;
+  border: 1px solid #4F4F4F;
+  height: 35px;
+  width: 330px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.campo input[type="text"]:hover, .campo input[type="email"]:hover, .campo input[type="password"]:hover, .campo input[type="date"]:hover{
+  border: 1px solid #1073E8;
+}
+
+.grupo-senha{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.error-senha {
+  position: absolute;
+  align-self: flex-end;
+  padding: 2.5em;
+  display: none;
+}
+
+.glyphicon-eye-close:hover path, .glyphicon-eye-open:hover path{
+  stroke: #1073E8;
+  -webkit-transition: 0.8s ease-out;
+  -moz-transition: 0.8s ease-out;
+  -o-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
+}
+
+.glyphicon-eye-open path{
+  -webkit-transition: 0.8s ease-out;
+  -moz-transition: 0.8s ease-out;
+  -o-transition: 0.8s ease-out;
+  transition: 0.8s ease-out; 
+}
+
+.glyphicon-eye-close path{
+  -webkit-transition: 0.8s ease-out;
+  -moz-transition: 0.8s ease-out;
+  -o-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
+}
+
+.glyphicon-eye-open{
+  cursor: pointer;
+  position: absolute;
+  align-self: flex-end;
+  padding: 0.5em;
+  display: none;
+}
+
+.glyphicon-eye-close{
+  cursor: pointer;
+  position: absolute;
+  align-self: flex-end;
+  padding: 0.5em;
+}
+
+
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button { 
+  display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #2c3e50;
+}
+
+/* A few custom styles for date inputs */
+.campo input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  color: #2c3e50;
+  font-size: 15px;
+  font-family: 'HelveticaNeue';
+  visibility: visible !important;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+  border: 1px solid #4F4F4F;
+  height: 35px;
+  width: 330px;
+  border-radius: 10px;
+  
+}
+
+
+.campo input:focus{
+  background: rgb(228, 225, 225);
+  border: 1px solid #1073E8;
+  outline: none;
+}
+
+.botao-cadastrar{
+  font-size: 1.2em;
+  background: #AFAFAF;
+  color: #fff;
+  padding: 0.2em 0.6em;
+  box-shadow: 2px 2px 2px rgb(160, 159, 159);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  border-radius: 22px;
+  height: 60px;
+  width: 330px;
+  cursor: pointer;
+  -webkit-transition: 0.8s ease-out;
+  -moz-transition: 0.8s ease-out;
+  -o-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
+}
+
+.botao-cadastrar:hover{
+  background: #1073E8;
+  color: #fff;
+  box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow: none;
+  -webkit-transition: 0.8s ease-out;
+  -moz-transition: 0.8s ease-out;
+  -o-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
+}
+/*Respnsividade*/
+@media(max-width:411px){
+.logo-div{
+  height: auto;
+  background-color: #2683f2;
+}
+
+.logo{
+  margin: 1%;
+  height: 90px;
+}
+
+.sub-hero-title{
+  font-size: 18.5px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.campo label{
+  align-self: center;
+}
+.campo input[type="text"], .campo input[type="email"], .campo input[type="password"], .campo input[type="date"]{
+  height: 35px;
+  width: 250px;
+  margin:auto;
+}
+
+}
+
+@media(max-width:500px){
+  .botao-cadastrar{
+    width: 300px;
+    height: 60px;
+    width: 260px;
+    margin: 1em;
+    }
+
+    .logo{
+      width: 200px;
+      margin-top: 1em;
+    }
+}
+
+
+
+
+
+

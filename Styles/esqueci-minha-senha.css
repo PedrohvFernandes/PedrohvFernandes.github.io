@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background-color: #f7f7f7;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+
+  /*Logo do diseasy*/
+  
+  .logo2{
+    margin: 1%;
+    height: 150px;
+}
+  
+  
+  /*Campo*/
+  .recuperar-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(80vh);
+  }
+  form{
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  fieldset{
+    border: 0;
+  }
+  
+  input, button{
+    border: 5px;
+  }
+  .campo{
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  
+  .campo .label-informacoes{
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+    align-self: flex-start;
+    color: #4F4F4F;
+    font-size: 21px;
+    font-family: 'HelveticaNeue';
+  }
+  .campo .label-informacoes-senha{
+    margin-bottom: -5px;
+  
+  }
+  
+  .campo input[type="email"]{
+    padding: 0 10px;
+    border: 1px solid #4F4F4F;
+    height: 35px;
+    width: 330px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .campo input[type="email"]:hover{
+    border: 1px solid #1073E8;
+  }
+
+  
+  .campo input:focus{
+    background: rgb(228, 225, 225);
+    border: 1px solid #1073E8;
+    outline: none;
+  }
+  
+  .botao-email{
+    font-size: 1.2em;
+    background: #AFAFAF;
+    color: #fff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgb(160, 159, 159);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    border-radius: 22px;
+    height: 60px;
+    width: 330px;
+    margin-top: 5px;
+    cursor: pointer;
+    -webkit-transition: 0.8s ease-out;
+    -moz-transition: 0.8s ease-out;
+    -o-transition: 0.8s ease-out;
+    transition: 0.8s ease-out;
+  }
+  
+  .botao-email:hover{
+    background: #1073E8;
+    color: #fff;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+    -webkit-transition: 0.8s ease-out;
+    -moz-transition: 0.8s ease-out;
+    -o-transition: 0.8s ease-out;
+    transition: 0.8s ease-out;
+  }
+
+  /*Resopnsividade*/
+  @media(max-width:411px){
+  .campo input[type="email"]{
+    height: 35px;
+    width: 250px;
+    margin:auto;
+  }
+
+  .botao-email{
+    width: 350px;
+    margin:0;
+  }
+  .logo2{
+    margin: 0;
+  }
+  
+  }
+  
+  @media(max-width:280px){
+    .recuperar-div{
+      flex-wrap: wrap;
+      }
+    .logo2{
+      margin: 0;
+    }
+  
+    .botao-email{
+      width: 340px;
+      margin:0;
+    }
+  }
+
+    @media (max-width:360px){
+      .botao-email{
+        width: 310px;
+        margin:0;
+      }
+
+      .logo2{
+        margin: 0;
+      }
+      .recuperar-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto;
+        }
+    }
+  
+  
+  
+  
+  
+  
+  

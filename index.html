@@ -1,108 +1,217 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Styles/login.css" type="text/css">
-  <title>index</title>
+  <title>Portfólio</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-
 <body>
+  <header>
+    <nav class="navegacao-links-cabecalho">
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ol class="links">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about-me"> About me </a>
+        </li>
+        <li>
+          <a href="#skills"> Skills </a>
+        </li>
+        <li>
+          <a href="#jobs"> Jobs </a>
+        </li>
+        <li>
+          <a href="#projects"> Projects </a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1oSKo99CBj6xD9wS4hrCvxPUv67OEK1Ud/view?usp=sharing" target="_blank">Curriculum</a>
+        </li>
+        <li>
+        <!--Ir para uma area com 4 campos: enviar um arquivo das vagas de emprego, contratação, etc para o meu email;  nome da  pessoa/empresa, o email da pessoa/empresa e um campo explicando sobre a vaga de emprego-->
+        <a href="#enviar-vagas">Enviar vagas</a>
+        </li>
+    </ol>
+  </nav>
+  </header>
+
   <main>
-    <section class="section-logar">
-      <div class="logar-div">
-        <img src="svgs/logo2.svg" alt="logo com duas bolinhas moleculares azuis e cinza" class="logo2">
-
-        <div class="grupo-usuario-errado">
-          <p id="usuario-errado"></p> 
-          <svg width="24" id="error-usuario" class="error-usuario" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" alt="dados incorretos errada">
-            <g clip-path="url(#clip0_1251:138)">
-              <path d="M10.8614 4.64573L2.39143 18.7857C2.2168 19.0882 2.1244 19.431 2.12342 19.7802C2.12244 20.1295 2.21292 20.4729 2.38586 20.7763C2.55879 21.0796 2.80816 21.3325 3.10914 21.5096C3.41012 21.6867 3.75223 21.7819 4.10143 21.7857H21.0414C21.3906 21.7819 21.7327 21.6867 22.0337 21.5096C22.3347 21.3325 22.5841 21.0796 22.757 20.7763C22.9299 20.4729 23.0204 20.1295 23.0194 19.7802C23.0185 19.431 22.9261 19.0882 22.7514 18.7857L14.2814 4.64573C14.1032 4.35183 13.8522 4.10885 13.5526 3.94021C13.2531 3.77158 12.9152 3.68298 12.5714 3.68298C12.2277 3.68298 11.8898 3.77158 11.5902 3.94021C11.2907 4.10885 11.0397 4.35183 10.8614 4.64573V4.64573Z" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M12.5714 9.78577V13.7858" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M12.5714 17.7858H12.5814" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </g>
-            <defs>
-              <clipPath id="clip0_1251:138">
-                <rect width="24" height="24" fill="white" transform="translate(0.571411 0.785767)"/>
-              </clipPath>
-            </defs>
-          </svg>
+    <section class="home-section" id="home">
+      <div class="encapsulamento-home-section-div">
+        <div class="home-presentation">
+          <h1 class="hero-title">Bem vind@ ao meu portfólio</h1>
+          <h2 class="hero-subtitle">Me chamo Pedro Vieira.</h2>
+          <span class="descrition-subtititule">Estudante de TI &</span>
+          <span class="descrition-subtititule">Futuro desenvolvedor front-end</span>
+          <a href="tel:+5533999181843">
+            <span class="descrition-subtititule telefone">Tel: +55 (33) 999181843</span>
+          </a>
         </div>
+        <div class="midias-sociais">
+          <a href="https://www.linkedin.com/in/pedro-henrique-vieira-fernandes/" target="_blank">
+            <img src="Icons/iconmonstr-linkedin-3.svg" alt="Logo do linkedin, i e n modelado internamente de um quadrado preto" class="linkedin-home">
+          </a>
+          <a href="https://github.com/PedrohvFernandes" target="_blank"> 
+            <img src="Icons/LogoGithub.svg" alt="Imagem da logo do Github, um gatinho modelado internamente no circulo preto" class="icons-home-section">
+          </a> 
+          <a href="mailto:pedrohv20fernandes@gmail.com?subject=Mensagem enviada do portfólio">
+            <img src="Icons/iconmonstr-gmail-1.svg" alt="Logo do gmail, um envolepe, uma cartinha" class="icons-home-section">
+          </a>
+          <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5533999181843&text=Oi%20Pedro,%20tudo%20bem?!" target="_blank">
+            <img src="Icons/iconmonstr-whatsapp-1.svg" alt="logo do whatsapp, um telefone modelado internamento no circulo preto, em volta de um circulo" class="icons-home-section">
+          </a>
+          <a href="https://www.instagram.com/pedro17fernandes/" target="_blank">
+            <img src="Icons/iconmonstr-instagram-11.svg" alt="Logo do instagram" class="icons-home-section">
+          </a>
+          <a href="https://www.google.com.br/maps/place/R.+Gilda+Maria+da+Silva,+481+-+Eldorado,+Contagem+-+MG,+32310-370/@-19.941091,-44.0346911,17z/data=!3m1!4b1!4m5!3m4!1s0xa695e910c166f7:0x1d07a12a7c7e9aa1!8m2!3d-19.9410961!4d-44.0325024">
+            <img src="Icons/3643769-building-home-house-main-menu-start_113416.svg" target="_blank" alt="uma casinha de preto" class="icons-home-section">
+          </a>
+        </div>
+      </div>
+      <div class="div-programador">
+        <img src="gifs/o que importa é pogramar.gif" alt="programador programando pegando fogo ao lado" class="programador">
+      </div>
+    </section>  
 
-        <form autocomplete="off">
-          <fieldset class="grupo">
-            <div class="campo" id="div-form">
-              <!-- Aqui deveria validar se o usuario existe, se o usuario é valido, se a senha e o nome se 
-                encontra em alguma entidade/objeto do banco de dados, se não apontar que senha ou nome 
-                esta errado se a sessão do usuario ja finalizou ou não se estiver finalizada ele tera que 
-                logar de novo, se não ele não precisa, a sessão ficara aberta um 1 dia, se o usuario
-                acessar a pagina de novo reseta o tempo da sessão, se não o tempo é decorrida, ou se 
-                usuario permanecer na pagina o tempo da sessão não conta, informar em que horas o usuario
-                logou, se o usuario sair ele não podera conseguir voltar pra pagina homem-app usando o modo de navegação
-                do navegador < > ele tera que logar novamente: https://pt.stackoverflow.com/questions/214129/como-não-permitir-o-usuário-acessar-a-página-anterior-de-login-registro-após-faz  -->
-              <!-- Aqui o campo de nome ou email tera que ser validado no php ou node, pra que ele aceite
-                tanto o nome do usuario e o email dele no banco de dados. Campo de username do logar com 
-                types: email e txt(Nome): https://pt.stackoverflow.com/questions/297464/
-                condição-de-login-com-usuário-ou-e-mail-no-mesmo-campo-->
-              <label class="label-informacoes" for="txt-nome" id="username-label"> Username</label>
-              <div class="grupo-username">
-                <input placeholder="Informe seu Nome ou Email" type="text" name="nome" id="username-input"required>
-                <svg width="24" id="error-username"class="error-username" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" alt="username errada">
-                  <g clip-path="url(#clip0_1251:138)">
-                    <path d="M10.8614 4.64573L2.39143 18.7857C2.2168 19.0882 2.1244 19.431 2.12342 19.7802C2.12244 20.1295 2.21292 20.4729 2.38586 20.7763C2.55879 21.0796 2.80816 21.3325 3.10914 21.5096C3.41012 21.6867 3.75223 21.7819 4.10143 21.7857H21.0414C21.3906 21.7819 21.7327 21.6867 22.0337 21.5096C22.3347 21.3325 22.5841 21.0796 22.757 20.7763C22.9299 20.4729 23.0204 20.1295 23.0194 19.7802C23.0185 19.431 22.9261 19.0882 22.7514 18.7857L14.2814 4.64573C14.1032 4.35183 13.8522 4.10885 13.5526 3.94021C13.2531 3.77158 12.9152 3.68298 12.5714 3.68298C12.2277 3.68298 11.8898 3.77158 11.5902 3.94021C11.2907 4.10885 11.0397 4.35183 10.8614 4.64573V4.64573Z" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12.5714 9.78577V13.7858" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12.5714 17.7858H12.5814" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1251:138">
-                      <rect width="24" height="24" fill="white" transform="translate(0.571411 0.785767)"/>
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-              <p id="username-errado"></p> 
-              <label class="label-informacoes label-informacoes-senha" id="senha-label" for="txt-senha"> Senha</label>
-              <a href="esqueci-minha-senha.html" class="esqueci-senha-form-a">
-                <span class="esqueci-senha-form" >Esqueci minha senha</span>
-              </a>
-              <div class="grupo-senha">
-                <input placeholder="Informe sua Senha" type="password" name="senha" id="senha-input"
-                required>
-                <svg width="24" id="error-senha"class="error-senha" height="24" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" alt="senha errada">
-                  <g clip-path="url(#clip0_1251:138)">
-                    <path d="M10.8614 4.64573L2.39143 18.7857C2.2168 19.0882 2.1244 19.431 2.12342 19.7802C2.12244 20.1295 2.21292 20.4729 2.38586 20.7763C2.55879 21.0796 2.80816 21.3325 3.10914 21.5096C3.41012 21.6867 3.75223 21.7819 4.10143 21.7857H21.0414C21.3906 21.7819 21.7327 21.6867 22.0337 21.5096C22.3347 21.3325 22.5841 21.0796 22.757 20.7763C22.9299 20.4729 23.0204 20.1295 23.0194 19.7802C23.0185 19.431 22.9261 19.0882 22.7514 18.7857L14.2814 4.64573C14.1032 4.35183 13.8522 4.10885 13.5526 3.94021C13.2531 3.77158 12.9152 3.68298 12.5714 3.68298C12.2277 3.68298 11.8898 3.77158 11.5902 3.94021C11.2907 4.10885 11.0397 4.35183 10.8614 4.64573V4.64573Z" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12.5714 9.78577V13.7858" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12.5714 17.7858H12.5814" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1251:138">
-                      <rect width="24" height="24" fill="white" transform="translate(0.571411 0.785767)"/>
-                    </clipPath>
-                  </defs>
-                </svg>
-                <svg alt ="Olho da senha sem o risco indicando que a senha esta mostrando"  id="olho-aberto" class="glyphicon-eye-open" onclick="mostrarSenha(this)" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <svg alt ="Olho da senha com o risco indicando que a senha não esta mostrando" id="olho-fechado" class="glyphicon-eye-close" onclick="mostrarSenha(this)" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.12 14.12C13.8454 14.4148 13.5141 14.6512 13.1462 14.8151C12.7782 14.9791 12.3809 15.0673 11.9781 15.0744C11.5753 15.0815 11.1752 15.0074 10.8016 14.8565C10.4281 14.7056 10.0887 14.4811 9.80385 14.1962C9.51897 13.9113 9.29439 13.572 9.14351 13.1984C8.99262 12.8249 8.91853 12.4247 8.92563 12.0219C8.93274 11.6191 9.02091 11.2219 9.18488 10.8539C9.34884 10.4859 9.58525 10.1547 9.88 9.88003M17.94 17.94C16.2306 19.243 14.1491 19.9649 12 20C5 20 1 12 1 12C2.24389 9.68192 3.96914 7.65663 6.06 6.06003L17.94 17.94ZM9.9 4.24002C10.5883 4.0789 11.2931 3.99836 12 4.00003C19 4.00003 23 12 23 12C22.393 13.1356 21.6691 14.2048 20.84 15.19L9.9 4.24002Z" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M1 1L23 23" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                          
-              </div>
-              <p id="senha-errado"></p>
-            </div>
-          </fieldset>
-          <!-- por enquanto é validado com dados falsos -->
-          <button alt="botão de login "type="button" onclick="return login()" class="botao-logar"> Entrar </button>
-          <img src="svgs/ou.svg" alt="a palavra ou" class="ou">
-        </form>
-        <button alt="botão de cadastrar"onclick="window.location.href ='cadastrar.html'" class="botao-cadastrar"> Cadastrar </button>
+    <section class="about-me-section" id="about-me">
+      <h2 class="subtitle-aboute-me">About-me</h2>
+      <div class="about-me-descrition">
+        <img src="gifs/mk-mortal-kombat.gif" alt="meme do toasty, gritinho do jogo mortal kombat" class="toasty-mk">
+        <p class="about-me-paragrafo"> Sou uma pessoa curiosa, animada e interessado em novas tecnologias. Procuro contribuir para um bom ambiente de trabalho e tenho facilidade em me adaptar. Estou sempre atento á formas de melhorar/agilizar processos no decorrer do dia. Gosto de ter boas relações sociais e não faço as coisas se estou com dúvida e corro atrás de respostas, sem ficar preso no mesmo lugar. Sou focado, dedicado e busco constante aprendizado para crescer na área. Sou apaixonado por desenvolvimento Web na parte do front-end: Html, Css, JS, React, Angular, etc.
+        </p>
+        
       </div>
     </section>
-  </main>
-  <script src="Scripts/login-cadastrar.js"></script>
-</body>
+    
+    <section class="skills-section"  id="skills">
+     <div class="skills-descrition"> 
+      <h2 class="subtitle-skills">Skills</h2>
+      
+      <ul class="itens-skills">
+        <li class="itens"><strong>HTML</strong>  
+          <img src="Icons/Logo HTML.svg" alt="Logo da tecnoliga HTML5" class="icons-skill-section">
+        </li>
+        <li class="itens"><strong>CSS </strong>
+          <img src="Icons/Logo CSS.svg" alt="Logo da tecnologia CSS3"class="icons-skill-section">
+        </li>
+        <li class="itens"><strong> JS</strong>
+          <img src="Icons/Logo JS.svg" alt="Logo da linguagem de programação Java Script, js" class="icons-skill-section">
+        </li>
+        <li class="itens"><strong> REACT </strong>
+          <img src="Icons/Logo React.svg" alt="Logo do framework para java script, React" class="icons-skill-section">
+        </li>
+      </ul>
+    </div>
+    </section>
 
+    <section class="jobs-section"  id="jobs">
+      <div class="jobs-descrition">
+        <h2 class="subtitle-jobs">Jobs</h2>
+        <span class="span-jobs">Não possuo experiência profissional</span>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="projetos-descrition">
+        <h2 class="subtitle-projetos">Projects</h2>
+        <span class="span-projects">Em breve...</span>
+      </div>
+      <div id="items-wrapper">
+        <div id="items">
+          <!-- Recomendação: todas as imagens do mesmo tamanho, nesse caso 1600x900 -->
+          <div class="item">
+            <img src="projetos/error.png" alt="tela de erro">
+          </div>
+          <div class="item">
+            <img src="projetos/error.png" alt="tela de erro">
+          </div>
+          <div class="item">
+            <img src="projetos/error.png" alt="tela de erro">
+          </div>
+          <div class="item">
+            <img src="projetos/error.png" alt="tela de erro">
+          </div>
+          <div class="item">
+            <img src="projetos/error.png" alt="tela de erro">
+          </div>
+        </div>
+      </div>
+    </section>
+      
+    <!-- Por enquanto não é hospedado, então ainda não usa o arquivo "email.php" 
+    <form autocomplete="off" method="POST" action="email.php"> pois é necessario uma hospedagem
+    pra enviar o formulario pro email usando o arquivo PHP : https://www.youtube.com/watch?v=Af0X_pEt7AY
+    usando o filezila client pra enviar os arquivos pro servidor
+
+    Use o Formspree para teste e desenvolvimento com projetos e formulários ilimitados, limitados a 50 envios / mês:
+    Por enquanto usa uma api do formspree: <form autocomplete="off" method="POST" action="https://formspree.io/f/mdoybrwl">
+    https://www.youtube.com/watch?v=L-hD-Lj5CIc
+    
+    Com arquivo precisa de um plano:   
+    <form autocomplete="off" method="POST" action="https://formspree.io/f/mdoybrwl" enctype="multipart/form-data"> 
+    -->
+    <section class="vagas-section" id="enviar-vagas">
+      <div class="div-vagas-titulos">
+        <h2 class="titulo-vagas"> Enviar vagas </h2>
+        <span class="span-vagas">
+          Preencha os campos abaixo e clique no botão, "Enviar vaga" para enviar a vaga
+        </span>
+      </div>
+        <!--Campos de entrada-->
+        <form autocomplete="off" method="POST" action="https://formspree.io/f/mdoybrwl" enctype="multipart/form-data"> 
+          <fieldset class="grupo">
+            <legend>
+              <span>1</span> Informações basicias
+            </legend>
+            <div class="campo">
+              <label for = "txt-nome"> <strong> Nome pessoal/Nome empresa </strong>
+                <input type = "text" name = "nome" id="txt-nome" required/>
+              </label>
+              <label for = "txt-email"> <strong> E-mail pessoal/Email empresa </strong> 
+                <input type = "email" name = "email" id="txt-email" required/> 
+              </label> 
+            </div>
+          </fieldset>
+          <fieldset class="grupo">
+            <legend>
+              <span> 2 </span> Detalhes da vaga
+            </legend>
+            <div class="campo">
+              <label for = "txt-descrition"> <strong>Descrição da vaga </strong>
+                <textarea id = "txt-descrition" name = "descrition" required></textarea>
+              </label>
+            </div>
+          </fieldset>
+          <!-- Arquivo ainda não da para enviar
+          <fieldset class="grupo">
+            <legend>
+              <span> 3 </span>Enviar arquivo da vaga
+            </legend>
+            <div class="campo">
+              <label for ="arq-vaga"> <strong>Arquivo da vaga(Somente arquivo pdf)</strong>
+                <input id="arq-vaga" type="file" name="arquivo" accept="application/pdf"/> 
+              </label>
+            </div>
+          </fieldset>
+          -->
+          <button type = "submit" class="botao-enviar"> Enviar vaga </button>
+          <button type ="reset" class="botao-apagar">Resetar os campos</button>
+        </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="direitos-reservados">Todos os direitos reservados à Pedro Vieira</p>
+  </footer>
+  <script src="scripts/imagens-scroll.js"></script>
+  <script src="scripts/mobile-navbar.js"></script>
+</body>
 </html>

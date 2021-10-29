@@ -35,8 +35,8 @@ class MobileNavbar{
 
 const mobileNavbar = new MobileNavbar(
     ".mobile-menu",
-    ".menu-ul-de-baixo",
-    ".menu-ul-de-baixo li",
+    ".links",
+    ".links li",
 );
 
 mobileNavbar.init();

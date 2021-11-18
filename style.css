@@ -7,6 +7,7 @@ body, html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *{
@@ -85,64 +86,7 @@ nav a:hover{
   transform: scale(1.2);
 }
 
-/*Responsividade menu*/
-@media(max-width:1450px){
-  .navegacao-links-cabecalho{
-    position: relative;
-  }
-  .links{
-    position: absolute;
-    top:7vh;
-    right: 0;
-    width: 75vw;
-    height: 93vh;
-    background: rgb(8, 8, 8);
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    /* opacity: 0;
-    transition:  opacity 0.3s ease-in; */
-    transform:  translateX(100%);
-  }
 
-  .links li{
-    margin-left: 0;
-    opacity: 0;
-  }
-
-  .mobile-menu{
-    display: block;
-  }
-
-}
-
-.links.active{
-  transform:translateX(0);
-  opacity: 0.90;
-}
-
-@keyframes navLinkFade {
-  from{
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to{
-    opacity: 1;
-    transform: translateX(0);
-    }
-}
-
-.mobile-menu.active .line1{
-  transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2{
-  opacity: 0;
-}
-
-.mobile-menu.active .line3{
-  transform: rotate(45deg) translate(-5px, -7px);
-}
 
 /*Estilo home*/
 .home-section{
@@ -232,53 +176,6 @@ div a{
   text-decoration: none;
 }
 
-/*Responsividade home*/
-@media(max-width:1450px){
-  .home-presentation{
-  margin-top: 0em;
-  padding: 0em;
-  }
-.midias-sociais{
-  padding:0em;
-  align-self: flex-start;
-  margin-top: 1em;
-  flex-wrap: wrap;
-  }
-
-.linkedin-home{
-  width: 40px;
-  height: 40px;
-  }
-.icons-home-section{
-  width: 40px;
-  height: 40px;
-  }
-.encapsulamento-home-section-div{
-  align-self: flex-start;
-  }
-.home-section{
-  flex-direction: column;
-  align-items: flex-start;
-  
-  }
-
-.hero-title{
-  font-size: 50px;
-}
-.hero-subtitle{
-  font-size: 40px;
-}
-.div-programador{
-  align-self: center;
-  margin-left: 0;
-  width: 100%;
-  }
-  
-.div-programador img{
-  width: 100%;
-  object-fit: cover;
- }
-}
 
 /*Style about me*/
 .about-me-descrition{
@@ -308,27 +205,6 @@ div a{
   width: 400px;
 }
 
-/*Responsividade about me*/
-@media(max-width:1450px){
-
-  .subtitle-aboute-me{
-    justify-content: center;
-    padding: 1em;
-    margin-top: 5%;
-  }
-
-  .about-me-descrition{
-    padding: 0em;
-    flex-direction: column;
-  }
-
-  .toasty-mk{
-    margin-top: 0px;
-    height: 300px;
-    width: 300px;
-  }
-
-}
 /*Style Skills*/
 .skills-descrition{
   display: flex;
@@ -374,26 +250,6 @@ div a{
   transform: scale(1.2);
 }
 
-
-/*Responsividade skills*/
-@media(max-width:1450px){
-  .skills-descrition{
-    align-items: center;
-    padding: 0;
-    margin:0
-  }
-  .itens{
-    font-size: 30px;
-    padding: 0;
-    margin:0
-  }
-  .itens-skills{
-    flex-direction: column;
-    padding: 0;
-    margin:0
-  }
-}
-
 /*Style Jobs*/
 .jobs-descrition{
   padding: 2em;
@@ -412,20 +268,6 @@ div a{
   color:#fff;
   font-size: 30px;
   margin-top: -1%;
-}
-
-/*Responsividade jobs*/
-@media(max-width:1450px){
-  .subtitle-jobs{
-    align-self: center;
-  }
-
-  .jobs-descrition{
-    padding: 0em;
-  }
-  .span-jobs{
-    align-self: flex-start;
-  }
 }
 
 /*Style projects*/
@@ -478,61 +320,6 @@ body #items-wrapper{
   color: #fff;
   font-size: 30px;
 }
-/*Responsivo projetos*/
-@media(max-width:640px){
-  #items-wrapper{
-    width: 88vw;
-  }
-  
-  .item{
-    width: 102%;
-  }
-  
-  .subtitle-projetos{
-    align-self: center;
-  }
-  }
-  
-  @media(max-width:411px){
-  #items-wrapper{
-    width: 80vw;
-  }
-  
-  .subtitle-projetos{
-    align-self: center;
-  }
-  
-  }
-  
-  @media(max-width:306px){
-    #items-wrapper{
-    width: 115vw;
-    }
-    
-    .item{
-    width: 102%;
-    }
-  
-    .subtitle-projetos{
-      align-self: center;
-    }
-  }
-  
-  @media(max-width:280px){
-    #items-wrapper{
-      width: 75vw;
-      }
-      
-    .item{
-      width: 102%;
-      }
-  
-    .subtitle-projetos{
-      align-self: center;
-      font-size: 40px;
-      margin-right: 1em;
-    }
-  }
 
 /*Style vagas*/
 
@@ -649,7 +436,240 @@ fieldset.grupo .campo{
   text-shadow: none;
 }
 
-/*Responsividade vagas*/
+
+  
+/*Style footer*/
+footer{
+  display: flex;
+  justify-content: flex-end;
+  color:#fff;
+  font-size: 15px;
+  padding: 0.2em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  box-shadow: 2px 2px 2px rgb(202, 3, 3);
+}
+
+
+/*Responsividade menu*/
+@media(max-width:1450px){
+  .navegacao-links-cabecalho{
+    position: relative;
+  }
+  .links{
+    position: absolute;
+    top:7vh;
+    right: 0;
+    width: 75vw;
+    height: 93vh;
+    background: rgb(8, 8, 8);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* opacity: 0;
+    transition:  opacity 0.3s ease-in; */
+    transform:  translateX(100%);
+  }
+
+  .links li{
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu{
+    display: block;
+  }
+
+}
+
+.links.active{
+  transform:translateX(0);
+  opacity: 0.90;
+}
+
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1{
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2{
+  opacity: 0;
+}
+
+.mobile-menu.active .line3{
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/*Responsividade home*/
+@media(max-width:1450px){
+  .home-presentation{
+  margin-top: 0em;
+  padding: 0em;
+  }
+.midias-sociais{
+  padding:0em;
+  align-self: flex-start;
+  margin-top: 1em;
+  flex-wrap: wrap;
+  }
+
+.linkedin-home{
+  width: 40px;
+  height: 40px;
+  }
+.icons-home-section{
+  width: 40px;
+  height: 40px;
+  }
+.encapsulamento-home-section-div{
+  align-self: flex-start;
+  }
+.home-section{
+  flex-direction: column;
+  align-items: flex-start;
+  
+  }
+
+.hero-title{
+  font-size: 50px;
+}
+.hero-subtitle{
+  font-size: 40px;
+}
+.div-programador{
+  align-self: center;
+  margin-left: 0;
+  width: 100%;
+  }
+  
+.div-programador img{
+  width: 100%;
+  object-fit: cover;
+ }
+}
+
+/*Responsividade about me*/
+@media(max-width:1450px){
+
+  .subtitle-aboute-me{
+    justify-content: center;
+    padding: 1em;
+    margin-top: 5%;
+  }
+
+  .about-me-descrition{
+    padding: 0em;
+    flex-direction: column;
+  }
+
+  .toasty-mk{
+    margin-top: 0px;
+    height: 300px;
+    width: 300px;
+  }
+
+}
+
+/*Responsividade skills*/
+@media(max-width:1450px){
+  .skills-descrition{
+    align-items: center;
+    padding: 0;
+    margin:0
+  }
+  .itens{
+    font-size: 30px;
+    padding: 0;
+    margin:0
+  }
+  .itens-skills{
+    flex-direction: column;
+    padding: 0;
+    margin:0
+  }
+}
+
+/*Responsividade jobs*/
+@media(max-width:1450px){
+  .subtitle-jobs{
+    align-self: center;
+  }
+
+  .jobs-descrition{
+    padding: 0em;
+  }
+  .span-jobs{
+    align-self: flex-start;
+  }
+}
+
+/*Responsivo projetos*/
+@media(max-width:640px){
+  #items-wrapper{
+    width: 88vw;
+  }
+  
+  .item{
+    width: 102%;
+  }
+  
+  .subtitle-projetos{
+    align-self: center;
+  }
+  }
+  
+  @media(max-width:411px){
+  #items-wrapper{
+    width: 80vw;
+  }
+  
+  .subtitle-projetos{
+    align-self: center;
+  }
+  
+  }
+  
+  @media(max-width:306px){
+    #items-wrapper{
+    width: 115vw;
+    }
+    
+    .item{
+    width: 102%;
+    }
+  
+    .subtitle-projetos{
+      align-self: center;
+    }
+  }
+  
+  @media(max-width:280px){
+    #items-wrapper{
+      width: 75vw;
+      }
+      
+    .item{
+      width: 102%;
+      }
+  
+    .subtitle-projetos{
+      align-self: center;
+      font-size: 40px;
+      margin-right: 1em;
+    }
+  }
+
+  /*Responsividade vagas*/
 @media(max-width:1450px){
   .campo input[type="text"], .campo input[type="email"], .campo textarea{
     height: 35px;
@@ -686,24 +706,11 @@ fieldset.grupo .campo{
       text-align: center;
     }
   }
-  
-/*Style footer*/
-footer{
-  display: flex;
-  justify-content: flex-end;
-  color:#fff;
-  font-size: 15px;
-  padding: 0.2em;
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
-  box-shadow: 2px 2px 2px rgb(202, 3, 3);
-}
-/*Responsividade footer*/
+
+  /*Responsividade footer*/
 @media(max-width:1450px){
   footer{
     font-size: 13px;
     overflow-x: hidden;
 }
 }
-
-

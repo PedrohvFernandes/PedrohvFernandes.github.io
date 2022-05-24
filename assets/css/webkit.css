@@ -1,0 +1,10 @@
+::-moz-selection {
+  background: var(--bg-dark);
+  color: var(--bg-light);
+}
+
+::-webkit-selection,
+::selection {
+  background: var(--bg-dark);
+  color: var(--bg-light);
+}

@@ -7,7 +7,7 @@
 - 👨‍💻 Ele contem uma seção com todos os meus projetos feitos
 - 📌 Quais as hard skills eu tenho
 - 😀 Uma seção caso você queira me enviar uma vaga/contratar :D
-- 📝 e claro o meu curricolo
+- 📝 e claro o meu currículo
 
 ### Tecnologias usadas para fazer o meu portfolio:
 <p align="center">

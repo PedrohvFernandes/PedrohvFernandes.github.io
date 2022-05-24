@@ -1,228 +1,161 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- pra quem ta com problema do menu saindo pra fora troca a tag viewport em head por esta : <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">  e coloca overflow-x: hidden; em body tanto no mobile quanto na versão pc
-  antiga: <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <title>Portfólio</title>
-  <link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body>
-  <header>
-    <nav class="navegacao-links-cabecalho">
-      <div class="mobile-menu">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-      <ol class="links">
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#about-me"> About me </a>
-        </li>
-        <li>
-          <a href="#skills"> Skills </a>
-        </li>
-        <li>
-          <a href="#jobs"> Jobs </a>
-        </li>
-        <li>
-          <a href="#projects"> Projects </a>
-        </li>
-        <li>
-          <a href="https://drive.google.com/file/d/1oSKo99CBj6xD9wS4hrCvxPUv67OEK1Ud/view?usp=sharing" target="_blank">Curriculum</a>
-        </li>
-        <li>
-        <!--Ir para uma area com 4 campos: enviar um arquivo das vagas de emprego, contratação, etc para o meu email;  nome da  pessoa/empresa, o email da pessoa/empresa e um campo explicando sobre a vaga de emprego-->
-        <a href="#enviar-vagas">Enviar vagas</a>
-        </li>
-    </ol>
-  </nav>
-  </header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
 
-  <main>
-    <section class="home-section" id="home">
-      <div class="encapsulamento-home-section-div">
-        <div class="encapsulamento-presentation-midias">
-          <div class="home-presentation">
-            <h1 class="hero-title">Bem vind@ ao meu portfólio</h1>
-            <h2 class="hero-subtitle">Me chamo Pedro Vieira.</h2>
-            <span class="descrition-subtititule">Estudante de TI &</span>
-            <span class="descrition-subtititule">Futuro desenvolvedor front-end</span>
-            <a href="tel:+5533999181843">
-              <span class="descrition-subtititule telefone">Tel: +55 (33) 999181843</span>
-            </a>
-          </div>
-          <div class="midias-sociais">
-            <a href="https://www.linkedin.com/in/pedro-henrique-vieira-fernandes/" target="_blank">
-              <img src="Icons/iconmonstr-linkedin-3.svg" alt="Logo do linkedin, i e n modelado internamente de um quadrado preto" class="linkedin-home">
-            </a>
-            <a href="https://github.com/PedrohvFernandes" target="_blank"> 
-              <img src="Icons/LogoGithub.svg" alt="Imagem da logo do Github, um gatinho modelado internamente no circulo preto" class="icons-home-section">
-            </a> 
-            <a href="mailto:pedrohv20fernandes@gmail.com?subject=Mensagem enviada do portfólio">
-              <img src="Icons/iconmonstr-gmail-1.svg" alt="Logo do gmail, um envolepe, uma cartinha" class="icons-home-section">
-            </a>
-            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5533999181843&text=Oi%20Pedro,%20tudo%20bem?!" target="_blank">
-              <img src="Icons/iconmonstr-whatsapp-1.svg" alt="logo do whatsapp, um telefone modelado internamento no circulo preto, em volta de um circulo" class="icons-home-section">
-            </a>
-            <a href="https://www.instagram.com/pedro17fernandes/" target="_blank">
-              <img src="Icons/iconmonstr-instagram-11.svg" alt="Logo do instagram" class="icons-home-section">
-            </a>
-          </div>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/padrao.css" />
+    <link rel="stylesheet" href="assets/css/variaveis.css" />
+    <link rel="stylesheet" href="assets/css/webkit.css">
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- Nav principal -->
+    <nav id="navigation">
+      <div class="wrapper">
+        <h3>
+          <a class="logo" href="#home">‹Pedro Henrique/›</a>
+        </h3>
+        <div class="menu">
+          <ul>
+            <li>
+              <a onclick="closeMenu()" href="#home">Home</a>
+            </li>
+            <li>
+              <a onclick="closeMenu()" href="#about">Sobre-me</a>
+            </li>
+            <li>
+              <a onclick="closeMenu()" href="#experience">Experiencia</a>
+            </li>
+            <li>
+              <a onclick="closeMenu()" href="#project">Projetos</a>
+            </li>
+            <li>
+              <a onclick="closeMenu()" href="#technologies">Estudos</a>
+            </li>
+          </ul>
+          <a class="button" onclick="closeMenu()" href="#contact">Contatos</a>
         </div>
-     
-      <div class="div-programador">
-        <img src="gifs/o que importa é pogramar.gif" alt="programador programando pegando fogo ao lado" class="programador">
+
+        <button
+          aria-expanded="false"
+          aria-label="Abrir menu"
+          onclick="openMenu()"
+          class="open-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 20H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 12H30"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M18 28L30 28"
+              stroke="#00856F"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          aria-expanded="true"
+          aria-label="Fechar menu"
+          onclick="closeMenu()"
+          class="close-menu"
+        >
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 10L10 30M10 10L30 30"
+              stroke="#FFFAF1"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
       </div>
-    </div>
-    </section>  
+    </nav>
 
-    <section class="about-me-section" id="about-me">
-      <h2 class="subtitle-aboute-me">About-me</h2>
-      <div class="about-me-descrition">
-        <img src="gifs/mk-mortal-kombat.gif" alt="meme do toasty, gritinho do jogo mortal kombat" class="toasty-mk">
-        <p class="about-me-paragrafo"> Sou uma pessoa curiosa, animada e interessado em novas tecnologias. Procuro contribuir para um bom ambiente de trabalho e tenho facilidade em me adaptar. Estou sempre atento á formas de melhorar/agilizar processos no decorrer do dia. Gosto de ter boas relações sociais e não faço as coisas se estou com dúvida e corro atrás de respostas, sem ficar preso no mesmo lugar. Sou focado, dedicado e busco constante aprendizado para crescer na área. Sou apaixonado por desenvolvimento Web na parte do front-end: Html, Css, JS, React, Angular, etc.
-        </p>
-        
-      </div>
-    </section>
-    
-    <section class="skills-section"  id="skills">
-     <div class="skills-descrition"> 
-      <h2 class="subtitle-skills">Skills</h2>
-      
-      <ul class="itens-skills">
-        <li class="itens"><strong>HTML</strong>
-          <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
-            <img src="Icons/Logo HTML.svg" alt="Logo da tecnoliga HTML5" class="icons-skill-section">
-          </a>
-        </li>
-        <li class="itens"><strong>CSS </strong>
-          <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
-            <img src="Icons/Logo CSS.svg" alt="Logo da tecnologia CSS3"class="icons-skill-section">
-          </a>
-        </li>
-        <li class="itens"><strong> JS</strong>
-          <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
-            <img src="Icons/Logo JS.svg" alt="Logo da linguagem de programação Java Script, js" class="icons-skill-section">
-          </a>
-        </li>
-        <li class="itens"><strong> REACT </strong>
-          <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started" target="_blank">
-            <img src="Icons/Logo React.svg" alt="Logo do framework para java script, React" class="icons-skill-section">
-          </a>
-        </li>
-      </ul>
-    </div>
-    </section>
-
-    <section class="jobs-section"  id="jobs">
-      <div class="jobs-descrition">
-        <h2 class="subtitle-jobs">Jobs</h2>
-        <span class="span-jobs">Não possuo experiência profissional</span>
-      </div>
-    </section>
-
-    <section class="projects-section" id="projects">
-      <div class="projetos-descrition">
-        <h2 class="subtitle-projetos">Projects</h2>
-      </div>
-      <div id="items-wrapper">
-        <div id="items">
-          <!-- Recomendação: todas as imagens do mesmo tamanho, nesse caso 1600x900 -->
-          <div class="item">
-            <a href="https://github.com/PedrohvFernandes/qrcode-generator" target="_blank">
-              <img src="projetos/Testando QRCODE.gif" alt="Projeto QRCODE em react">
-            </a>
-          </div>
-
-          <div class="item">
-            <a href="https://github.com/PedrohvFernandes/aluracord-lol" target="_blank">
-              <img src="projetos/aluracord-lol.png" alt="Projeto de recriação do discord">
-            </a>
-          </div>
-          <div class="item">
-            <a href="https://github.com/PedrohvFernandes/jogo-js" target="_blank">
-              <img src="projetos/ProjetoJogo.png" alt="Projeto de recriação do discord">
-            </a>
-          </div>
-
-        </div>
+    <!-- Home -->
+    <section id="home">
+      <div class="wrapper">
+        <!-- Dar uma ola, colocar meu nome, Falar que eu sou um desenvolvedor front-end e Colocar meu cv e meu github. Quando estiver para mobile não tem imagem, quando estiver desktop fica com uma imagem -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eos debitis dolorem commodi consectetur voluptate dolorum unde quaerat enim! Architecto eum in quaerat veritatis consequuntur deleniti accusantium ut, ipsa commodi.
       </div>
     </section>
-      
-    <!-- Por enquanto não é hospedado, então ainda não usa o arquivo "email.php" 
-    <form autocomplete="off" method="POST" action="email.php"> pois é necessario uma hospedagem
-    pra enviar o formulario pro email usando o arquivo PHP : https://www.youtube.com/watch?v=Af0X_pEt7AY
-    usando o filezila client pra enviar os arquivos pro servidor
 
-    Use o Formspree para teste e desenvolvimento com projetos e formulários ilimitados, limitados a 50 envios / mês:
-    Por enquanto usa uma api do formspree: <form autocomplete="off" method="POST" action="https://formspree.io/f/mdoybrwl">
-    https://www.youtube.com/watch?v=L-hD-Lj5CIc
-    
-    Com arquivo precisa de um plano:   
-    <form autocomplete="off" method="POST" action="https://formspree.io/f/mdoybrwl" enctype="multipart/form-data"> 
-    -->
-    <section class="vagas-section" id="enviar-vagas">
-      <div class="div-vagas-titulos">
-        <h2 class="titulo-vagas"> Enviar vagas </h2>
-        <span class="span-vagas">
-          Preencha os campos abaixo e clique no botão, "Enviar vaga" para enviar a vaga
-        </span>
-      </div>
-        <!--Campos de entrada-->
-        <form autocomplete="off" method="POST" action="https://formspree.io/f/mdoybrwl" enctype="multipart/form-data"> 
-          <fieldset class="grupo">
-            <legend>
-              <span>1</span> Informações basicias
-            </legend>
-            <div class="campo">
-              <label for = "txt-nome"> <strong> Nome pessoal/Nome empresa </strong>
-                <input type = "text" name = "nome" id="txt-nome" required/>
-              </label>
-              <label for = "txt-email"> <strong> E-mail pessoal/Email empresa </strong> 
-                <input type = "email" name = "email" id="txt-email" required/> 
-              </label> 
-            </div>
-          </fieldset>
-          <fieldset class="grupo">
-            <legend>
-              <span> 2 </span> Detalhes da vaga
-            </legend>
-            <div class="campo">
-              <label for = "txt-descrition"> <strong>Descrição da vaga </strong>
-                <textarea id = "txt-descrition" name = "descrition" required></textarea>
-              </label>
-            </div>
-          </fieldset>
-          <!-- Arquivo ainda não da para enviar
-          <fieldset class="grupo">
-            <legend>
-              <span> 3 </span>Enviar arquivo da vaga
-            </legend>
-            <div class="campo">
-              <label for ="arq-vaga"> <strong>Arquivo da vaga(Somente arquivo pdf)</strong>
-                <input id="arq-vaga" type="file" name="arquivo" accept="application/pdf"/> 
-              </label>
-            </div>
-          </fieldset>
-          -->
-          <button type = "submit" class="botao-enviar"> Enviar vaga </button>
-          <button type ="reset" class="botao-apagar">Resetar os campos</button>
-        </form>
+    <!-- About me -->
+    <section id="about" class="bg-dark">
+      <div class="wrapper"></div>
     </section>
 
-  </main>
+    <!-- Experiencia -->
+    <section id="experience">
+      <div class="wrapper">
 
-  <footer>
-    <p class="direitos-reservados">Todos os direitos reservados à Pedro Vieira</p>
-  </footer>
-  <script src="scripts/imagens-scroll.js"></script>
-  <script src="scripts/mobile-navbar.js"></script>
-</body>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="project" class="bg-dark">
+      <div class="wrapper"></div>
+    </section>
+
+    <!-- Tecnologias -->
+    <section id="technologies">
+      <div class="wrapper"></div>
+    </section>
+
+    <!-- Contatos -->
+    <section id="contact" class="bg-dark">
+      <div class="wrapper">
+        <!-- Meu linkedin, github, gmail e se preferir pode me chamar pelo whatsapp(button pra conversar comigo) que respondo em instantes-->
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="wrapper"></div>
+    </footer>
+
+    <a id="backToTopButton"  href="#home">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="20" r="20" fill="#00856F"/>
+        <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>        
+    </a>
+
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

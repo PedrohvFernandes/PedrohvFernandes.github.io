@@ -28,6 +28,42 @@ nav button {
   cursor: pointer;
 }
 
+/* Efeito da linha de baixo nos itens do menu quando estao na seçao especifica */
+
+nav#navigation .menu ul li a {
+  color: white;
+  opacity: 0.7;
+}
+
+nav#navigation .menu li a {
+  transition: opacity 0.4s;
+}
+
+nav#navigation .menu li a.active {
+  opacity: 1;
+  font-weight: 700;
+}
+
+nav#navigation .menu li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: var(--bg-light);
+
+  position: relative;
+  bottom: -2rem;
+  left: -0.5rem;
+
+  display: block;
+
+  transition: width 0.2s;
+}
+
+nav#navigation .menu li a.active::after {
+  padding-inline: 0.8rem;
+  width: 100%;
+}
+
 /* ============ MENU-EXPANDED =========== */
 .open-menu {
   position: relative;
@@ -62,6 +98,9 @@ body.menu-expanded .close-menu {
 
 .menu {
   transform: translateY(100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body.menu-expanded .menu {
@@ -82,6 +121,7 @@ body.menu-expanded .menu {
 .menu ul {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4.8rem;
 
   margin-top: 6rem;
@@ -95,22 +135,35 @@ body.menu-expanded .menu {
 
 .menu .button {
   background: white;
+  border: none;
   border-radius: 4rem;
+
+  color: var(--primary-color);
   font-weight: 700; /*bold*/
   font-size: 1.8rem;
   line-height: 2.3rem;
   text-transform: uppercase;
 
-  color: var(--primary-color);
-
   display: inline-block;
   padding: 1.6rem 3.2rem;
 
+  gap: 1.6rem;
+  cursor: pointer;
+
   margin-top: 4.8rem;
   margin-bottom: 8rem;
+
+  transition: background 0.2s;
 }
 
 .menu .button:hover {
+  background-color: var(--primary-color);
+  color: white;
+
+  filter: brightness(1.2);
+}
+
+.menu .button.active {
   background-color: var(--primary-color);
   color: white;
 

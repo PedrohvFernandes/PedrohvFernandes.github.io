@@ -23,7 +23,7 @@ body {
   /* overflow: overlay; */
 /* 
   background-color: var(--bg-light); */
-  color: black;
+  color: var(--paragraph);
 }
 
 ul {
@@ -69,6 +69,10 @@ section {
   background-color: var(--bg-light);
 }
 
+.text-primary{
+  color: var(--primary-color);
+}
+
 /* ========= CONFIG PADRAO DE CORES PARA  ============= */
 #backToTopButton circle {
   fill: var(--primary-color);
@@ -91,5 +95,3 @@ button.open-menu path,
 #navigation.scroll button.open-menu path{
   stroke: white;
 }
-
-/* Efeito de quando esta na seçao colocar uma borda em baixo do link  */

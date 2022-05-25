@@ -3,12 +3,11 @@ nav {
   display: flex;
 
   height: var(--nav-height);
-  
 
   position: fixed;
   top: 0;
   width: 100vw;
-  
+
   z-index: 100;
 }
 
@@ -177,12 +176,46 @@ body.menu-expanded nav .close-menu {
 }
 
 /* ============ HOME =========== */
+#home h1 {
+ color: var(--headline);
+}
 
 
 
+/* ============ FOOTER para DESKTOP e MOBILE =========== */
 
+footer{
+  padding-block: 3rem;
+  text-align: center;
+  color: var(--primary-color-two);
+}
 
-/* ============ footer =========== */
+footer .heart  {
+  margin-inline: 0.2rem;
+}
+
+footer .heart svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+footer .heart path {
+  fill: var(--primary-color)
+}
+
+footer p,
+footer h4 {
+  display: inline-block;
+}
+
+footer .text-primary{
+  transition: 0.5s all;
+}
+
+footer .text-primary:hover{
+  color: var(--primary-color-two);
+}
+
 
 /* BACK TO TOP */
 #backToTopButton {

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/padrao.css" />
     <link rel="stylesheet" href="assets/css/variaveis.css" />
-    <link rel="stylesheet" href="assets/css/webkit.css">
+    <link rel="stylesheet" href="assets/css/webkit.css" />
 
     <title>Portfolio</title>
   </head>
@@ -103,7 +103,6 @@
             />
           </svg>
         </button>
-
       </div>
     </nav>
 
@@ -111,7 +110,27 @@
     <section id="home" class="bg-light">
       <div class="wrapper">
         <!-- Dar uma ola, colocar meu nome, Falar que eu sou um desenvolvedor front-end e Colocar meu cv e meu github. Quando estiver para mobile não tem imagem, quando estiver desktop fica com uma imagem -->
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eos debitis dolorem commodi consectetur voluptate dolorum unde quaerat enim! Architecto eum in quaerat veritatis consequuntur deleniti accusantium ut, ipsa commodi.
+        <div class="col-a">
+          <header>
+            <h1>
+              Olá, eu sou <span class="text-primary">Pedro Henrique</span>
+            </h1>
+            <h4>Desenvolvedor front-end 👨🏻‍💻</h4>
+          </header>
+          <div class="content">
+            <a
+              href="https://drive.google.com/file/d/1oSKo99CBj6xD9wS4hrCvxPUv67OEK1Ud/view?usp=sharing"
+              target="_blank"
+            >
+              Meu CV
+            </a>
+            <a href="https://github.com/PedrohvFernandes" target="_blank"> Meu Github </a>
+          </div>
+        </div>
+
+        <div class="col-b">
+          <img src="" alt="" />
+        </div>
       </div>
     </section>
 
@@ -122,9 +141,7 @@
 
     <!-- Experiencia -->
     <section id="experience" class="bg-light">
-      <div class="wrapper">
-
-      </div>
+      <div class="wrapper"></div>
     </section>
 
     <!-- Projetos -->
@@ -145,15 +162,49 @@
     </section>
 
     <footer id="footer" class="bg-light">
-      <div class="wrapper"></div>
+      <div class="wrapper">
+        <p>Desenvolvido com muito</p>
+        <span class="heart">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 959.41 880.1">
+            <path
+              d="M479.71,137.75C399.76-79.31,0-45.73,0,280.47c0,162.7,122.33,379,479.71,599.63,357.38-220.66,479.7-436.93,479.7-599.63C959.41-43.73,559.66-79.31,479.71,137.75Z"
+              fill="#ed1c24"
+            />
+          </svg>
+        </span>
+        <p>por</p>
+        <a href="#home"><h4 class="text-primary">‹Pedro Henrique/›</h4></a>
+        <p>
+          Copyright © 2022 <br />
+          Todos os direitos reservados.
+        </p>
+      </div>
     </footer>
 
-    <a id="backToTopButton"  href="#home">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="20" cy="20" r="20" fill="#00856F"/>
-        <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>        
+    <a id="backToTopButton" href="#home">
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="20" cy="20" r="20" fill="#00856F" />
+        <path
+          d="M20 27V13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M13 20L20 13L27 20"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
     </a>
 
     <script src="https://unpkg.com/scrollreveal"></script>

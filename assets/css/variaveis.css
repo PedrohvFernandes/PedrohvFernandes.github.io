@@ -4,11 +4,11 @@
   --hue: 1;
 
   /* Cor, saturaçao, muita luz ou pouca luz e o alpha(opacidade)*/
-  --primary-color: hsla(var(--hue), 28%, 20%, 1);
-  --primary-color-two: hsla(var(--hue), 60%, 40%, 1);
+  --primary-color: hsla(var(--hue), 28%, 22%, 1);
+  --primary-color-two: hsla(var(--hue), 45%, 30%, 1);
 
   --headline: hsla(210, 11%, 15%, 1);
-  --paragraph: hsla(210, 9%, 31%, 1);
+  --paragraph: hsla(210, 15%, 20%, 1);
 
   --brand-beige: hsla(39, 100%, 97%, 1);
   /* 170(hue) - 148(--brando-light) = 22       170 - 22 = 148 */

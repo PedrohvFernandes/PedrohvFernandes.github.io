@@ -81,4 +81,5 @@ ScrollReveal({
   #experience,
   #project,
   #technologies,
-  #contact`)
+  #contact,
+  #footer`)

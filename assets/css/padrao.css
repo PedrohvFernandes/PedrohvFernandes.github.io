@@ -21,7 +21,7 @@ body {
   text-align: center;
   /* Não conta a largura da barra */
   /* overflow: overlay; */
-/* 
+  /* 
   background-color: var(--bg-light); */
   color: var(--paragraph);
 }
@@ -62,7 +62,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   padding: 1.6rem 3.2rem;
 
   background: var(--bg-light);
@@ -79,7 +79,7 @@ section {
   text-transform: uppercase;
 
   gap: 1rem;
-  
+
   transition: 200ms all;
 
   position: relative;
@@ -88,13 +88,13 @@ section {
 }
 
 .btn:hover,
-.btn:hover path { 
+.btn:hover path {
   color: white;
   fill: white;
 }
 
-.btn::before{
-  content: "";
+.btn::before {
+  content: '';
   position: absolute;
   background-color: var(--bg-dark);
   filter: brightness(1.5);
@@ -107,18 +107,18 @@ section {
   /* transition: width 0.2s ease-in-out; */
   top: 0;
   bottom: 0;
-  left:0;
+  left: 0;
   right: 100%;
   transition: right 0.2s ease-in-out;
 }
 
-.btn:hover::before{
+.btn:hover::before {
   /* width: 100%; */
   right: 0;
   z-index: -1;
 }
 
-.bg-dark{
+.bg-dark {
   background: var(--bg-dark);
 }
 
@@ -126,8 +126,20 @@ section {
   background-color: var(--bg-light);
 }
 
-.text-primary{
+.text-primary {
   color: var(--primary-color);
+}
+
+/* =============== KEYFRAMES ================== */
+
+@keyframes pisca {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 /* ========= CONFIG PADRAO DE CORES PARA  ============= */
@@ -149,6 +161,6 @@ button.open-menu path,
   stroke: var(--primary-color-two);
 }
 
-#navigation.scroll button.open-menu path{
+#navigation.scroll button.open-menu path {
   stroke: white;
 }

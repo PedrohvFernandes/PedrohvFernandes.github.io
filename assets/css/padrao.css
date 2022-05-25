@@ -20,7 +20,7 @@ body {
   font-size: 1.6rem;
   text-align: center;
   /* Não conta a largura da barra */
-  overflow: overlay;
+  /* overflow: overlay; */
 
   background-color: var(--bg-light);
   color: black;
@@ -43,34 +43,6 @@ section {
   min-height: 100vh;
   padding-block: 10rem;
 }
-
-/* ========= CONFIG PADRAO DE CORES PARA  ============= */
-#backToTopButton circle {
-  fill: var(--primary-color);
-}
-
-#navigation h3 .logo {
-  color: var(--primary-color-two);
-}
-
-body.menu-expanded #navigation h3 .logo,
-#navigation.scroll h3 .logo {
-  color: white;
-}
-
-button.open-menu path[stroke*='00856F'],
-#contact li path {
-  stroke: var(--primary-color-two);
-}
-
-#navigation.scroll button.open-menu path[stroke*='00856F'] {
-  stroke: white;
-}
-
-/* Efeito de quando esta na seçao colocar uma borda em baixo do link  */
-
-
-
 
 /* =========== REUTILIZAVEL ============= */
 
@@ -122,3 +94,28 @@ button.open-menu path[stroke*='00856F'],
 .bg-dark{
   background: var(--bg-dark);
 }
+
+/* ========= CONFIG PADRAO DE CORES PARA  ============= */
+#backToTopButton circle {
+  fill: var(--primary-color);
+}
+
+#navigation h3 .logo {
+  color: var(--primary-color-two);
+}
+
+body.menu-expanded #navigation h3 .logo,
+#navigation.scroll h3 .logo {
+  color: white;
+}
+
+button.open-menu path,
+#contact li path {
+  stroke: var(--primary-color-two);
+}
+
+#navigation.scroll button.open-menu path{
+  stroke: white;
+}
+
+/* Efeito de quando esta na seçao colocar uma borda em baixo do link  */

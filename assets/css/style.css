@@ -3,10 +3,12 @@ nav {
   display: flex;
 
   height: var(--nav-height);
-  width: 100vw;
+  
 
   position: fixed;
   top: 0;
+  width: 100vw;
+  
   z-index: 100;
 }
 
@@ -27,29 +29,29 @@ nav button {
 }
 
 /* ============ MENU-EXPANDED =========== */
-
-nav .close-menu,
-nav .menu {
-  position: fixed;
+.open-menu {
+  position: relative;
 }
 
 body.menu-expanded {
   overflow: hidden;
 }
 
+nav .close-menu,
+nav .menu,
+body.menu-expanded .open-menu {
+  position: fixed;
+}
+
 body.menu-expanded > :not(nav) {
   visibility: hidden;
 }
 
-.open-menu {
-  position: relative;
-}
 .menu,
 .close-menu,
 body.menu-expanded .open-menu {
   opacity: 0;
   visibility: hidden;
-  position: absolute;
 }
 
 body.menu-expanded .menu,

@@ -176,11 +176,34 @@ body.menu-expanded nav .close-menu {
 }
 
 /* ============ HOME =========== */
-#home h1 {
- color: var(--headline);
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+#home h1 {
+ color: var(--headline);
+ font-size: 3rem;
+ margin-bottom: 1rem;
+}
 
+#home h4 {
+  font-size: 2.5rem;
+ }
+
+#home .emoji{
+font-size: 3.2rem;
+}
+
+#home .btn {
+  margin-inline: auto;
+}
+
+#home .btn-github svg {
+  width: 3rem;
+  height: 3rem;
+}
 
 /* ============ FOOTER para DESKTOP e MOBILE =========== */
 

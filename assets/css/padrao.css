@@ -23,7 +23,6 @@ body {
   /* overflow: overlay; */
   /* 
   background-color: var(--bg-light); */
-  color: var(--paragraph);
 }
 
 ul {
@@ -64,16 +63,13 @@ section {
   justify-content: center;
 
   padding: 1.6rem 3.2rem;
+  margin-inline: auto;
 
-  background: var(--bg-light);
-
-  border: 0.2rem solid var(--bg-dark);
   border-radius: 0.2rem;
 
   width: fit-content;
 
-  color: var(--bg-dark);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
 
   text-transform: uppercase;
@@ -82,22 +78,14 @@ section {
 
   transition: 200ms all;
 
+  /* Pro after ficar na camada do button e não do pai */
   position: relative;
   overflow: hidden;
   z-index: 2;
 }
-
-.btn:hover,
-.btn:hover path {
-  color: white;
-  fill: white;
-}
-
 .btn::before {
   content: '';
   position: absolute;
-  background-color: var(--bg-dark);
-  filter: brightness(1.5);
   /* width: 0;
   border: 0.1rem solid var(--bg-dark);
   top: 0;
@@ -112,22 +100,84 @@ section {
   transition: right 0.2s ease-in-out;
 }
 
-.btn:hover::before {
+.bg-dark {
+  background: var(--bg-dark);
+  color: var(--bg-light);
+}
+
+.bg-dark .btn{
+  background: var(--bg-dark);
+  border: 0.2rem solid var(--bg-light);
+  color: var(--bg-light);
+}
+
+.bg-dark .btn::before {
+  background-color: var(--bg-light);
+}
+
+.bg-dark .btn path {
+  fill: var(--bg-light);
+}
+
+.bg-dark .btn:hover,
+.bg-dark .btn:hover path {
+  color: var(--bg-dark);
+  fill: var(--bg-dark);
+}
+
+
+.bg-light {
+  background-color: var(--bg-light);
+  color: var(--bg-dark);
+}
+
+.bg-light .btn{
+  background: var(--bg-light);
+  border: 0.2rem solid var(--bg-dark);
+  color: var(--bg-dark);
+}
+
+.bg-light .btn::before {
+  background-color: var(--bg-dark);
+}
+
+
+.bg-light .btn path {
+  fill: var(--bg-dark);
+}
+
+.bg-light .btn:hover,
+.bg-light .btn:hover path {
+  color: var(--bg-light);
+  fill: var(--bg-light);
+}
+
+.bg-dark .btn:hover::before,
+.bg-light .btn:hover::before {
   /* width: 100%; */
   right: 0;
   z-index: -1;
 }
 
-.bg-dark {
-  background: var(--bg-dark);
-}
-
-.bg-light {
-  background-color: var(--bg-light);
-}
-
 .text-primary {
   color: var(--primary-color);
+}
+
+section header h4 {
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+section header h2 {
+  font-size: 3rem;
+  line-height: 3.9rem;
+}
+
+section header h1 {
+  font-size: 3.4rem;
+  line-height: 130%;
 }
 
 /* =============== KEYFRAMES ================== */
@@ -143,7 +193,7 @@ section {
 }
 
 @keyframes scroll-down {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(-1.5rem);
   }

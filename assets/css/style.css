@@ -184,24 +184,25 @@ body.menu-expanded nav .close-menu {
 }
 
 #home h1 {
- color: var(--headline);
- font-size: 3rem;
- margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--headline);
 }
 
-#home h1::after{
+#home h1::after {
   content: '|';
   opacity: 1;
-  animation: pisca .7s infinite;
+  animation: pisca 0.7s infinite;
   color: var(--primary-color);
 }
 
 #home h4 {
   font-size: 2.5rem;
- }
+  color: var(--headline);
+}
 
-#home .emoji{
-font-size: 3.2rem;
+#home .emoji {
+  font-size: 3.2rem;
 }
 
 #home .btn {
@@ -213,6 +214,10 @@ font-size: 3.2rem;
   height: 3rem;
 }
 
+#home .col-b img {
+  display: none;
+}
+
 #home .scroll {
   position: absolute;
   bottom: 1rem;
@@ -220,31 +225,82 @@ font-size: 3.2rem;
   letter-spacing: 0.2rem;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--bg-dark);
   display: flex;
   align-items: flex-start;
 }
 
-#home .scroll p{
-  padding: 1rem 0;
+#home .scroll p {
+  padding-block: 1rem;
   font-size: 1.6rem;
 }
 
-#home .scroll img{
+#home .scroll img {
   animation: scroll-down 3s infinite forwards;
-  width: 2.7rem;
+  width: 3rem;
 }
 
+/* ============ ABOUT-ME =========== */
+
+#about .div-minha-imagem {
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+#about .div-minha-imagem img {
+  border-left: 0.5rem solid var(--primary-color);
+  filter: opacity(55%);
+  transition: 0.4s;
+  width: 90%;
+}
+
+#about .div-minha-imagem img:hover {
+  filter: opacity(70%);
+  border-left: 0.5rem solid var(--bg-light);
+}
+
+#about header h2::before,
+#about header h2::after {
+  font-size: 4.5rem;
+  color: var(--primary-color);
+  filter: brightness(1.2);
+  animation: pisca 1.5s infinite;
+  opacity: 1;
+}
+
+#about header h2::before {
+  content: '{';
+}
+
+#about header h2::after {
+  content: '}';
+}
+
+#about .content{
+  word-wrap:break-word;
+}
+
+#about .brazil {
+  font-size: 2.5rem;
+  font-weight: 700;
+  animation: pisca 4s infinite;
+  opacity: 1;
+}
+
+#about .content p{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
 
 /* ============ FOOTER para DESKTOP e MOBILE =========== */
 
-footer{
+footer {
   padding-block: 3rem;
   text-align: center;
   color: var(--primary-color-two);
 }
 
-footer .heart  {
+footer .heart {
   margin-inline: 0.2rem;
 }
 
@@ -254,7 +310,7 @@ footer .heart svg {
 }
 
 footer .heart path {
-  fill: var(--primary-color)
+  fill: var(--primary-color);
 }
 
 footer p,
@@ -262,14 +318,13 @@ footer h4 {
   display: inline-block;
 }
 
-footer .text-primary{
+footer .text-primary {
   transition: 0.5s all;
 }
 
-footer .text-primary:hover{
+footer .text-primary:hover {
   color: var(--primary-color-two);
 }
-
 
 /* BACK TO TOP */
 #backToTopButton {

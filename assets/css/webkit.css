@@ -1,10 +1,10 @@
 ::-moz-selection {
-  background: var(--bg-dark);
+  background: var(--primary-color);
   color: var(--bg-light);
 }
 
 ::-webkit-selection,
 ::selection {
-  background: var(--bg-dark);
+  background: var(--primary-color);
   color: var(--bg-light);
 }

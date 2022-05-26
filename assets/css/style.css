@@ -180,6 +180,7 @@ body.menu-expanded nav .close-menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 #home h1 {
@@ -211,6 +212,29 @@ font-size: 3.2rem;
   width: 3rem;
   height: 3rem;
 }
+
+#home .scroll {
+  position: absolute;
+  bottom: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--bg-dark);
+  display: flex;
+  align-items: flex-start;
+}
+
+#home .scroll p{
+  padding: 1rem 0;
+  font-size: 1.6rem;
+}
+
+#home .scroll img{
+  animation: scroll-down 3s infinite forwards;
+  width: 2.7rem;
+}
+
 
 /* ============ FOOTER para DESKTOP e MOBILE =========== */
 

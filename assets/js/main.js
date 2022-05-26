@@ -96,8 +96,9 @@ function typeWriter(element) {
   textArray.forEach((letter, i) => {
     // Cada letra tem um tempo de delay, que é o tempo que ela ficará escrita
     // Pra cada letra ele adiciona uma apos a outra
-    setTimeout(() => element.innerHTML += letter, 180 * i) // a primeira letra é 0 -> 75 * 0 = 0, a segunda é 75 * 1 = 75, a terceira é 75 * 2 = 150, etc
+    setTimeout(() => element.innerHTML += letter, 130 * i) // a primeira letra é 0 -> 75 * 0 = 0, a segunda é 75 * 1 = 75, a terceira é 75 * 2 = 150, etc
   });
 }
-const title = document.querySelector('#titulo')
-typeWriter(title)
+
+const spanTitle = document.querySelector('#spanTitle')
+typeWriter(spanTitle)

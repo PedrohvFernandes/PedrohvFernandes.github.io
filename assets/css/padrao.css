@@ -175,6 +175,23 @@ section header h2 {
   line-height: 3.9rem;
 }
 
+header h2::before,
+header h2::after {
+  font-size: 4.5rem;
+  color: var(--primary-color);
+  filter: brightness(1.2);
+  animation: pisca 1.5s infinite;
+  opacity: 1;
+}
+
+header h2::before {
+  content: '{';
+}
+
+header h2::after {
+  content: '}';
+}
+
 section header h1 {
   font-size: 3.4rem;
   line-height: 130%;
@@ -206,6 +223,29 @@ section header h1 {
   100% {
     opacity: 0;
     transform: translateY(1rem);
+  }
+}
+
+@keyframes show-right {
+  from {
+    opacity: 0;
+    /* translate3d(tx, ty, tz) */
+    transform: translate3d(-3rem, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -3rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 

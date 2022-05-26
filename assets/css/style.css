@@ -234,9 +234,10 @@ body.menu-expanded nav .close-menu {
   font-size: 1.6rem;
 }
 
-#home .scroll img {
+#home .scroll svg {
   animation: scroll-down 3s infinite forwards;
-  width: 3rem;
+  width:1.8rem;
+  fill: var(--bg-dark);
 }
 
 /* ============ ABOUT-ME =========== */
@@ -250,29 +251,12 @@ body.menu-expanded nav .close-menu {
   border-left: 0.5rem solid var(--primary-color);
   filter: opacity(55%);
   transition: 0.4s;
-  width: 90%;
+  width: 100%;
 }
 
 #about .div-minha-imagem img:hover {
   filter: opacity(70%);
   border-left: 0.5rem solid var(--bg-light);
-}
-
-#about header h2::before,
-#about header h2::after {
-  font-size: 4.5rem;
-  color: var(--primary-color);
-  filter: brightness(1.2);
-  animation: pisca 1.5s infinite;
-  opacity: 1;
-}
-
-#about header h2::before {
-  content: '{';
-}
-
-#about header h2::after {
-  content: '}';
 }
 
 #about .content{
@@ -290,6 +274,56 @@ body.menu-expanded nav .close-menu {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 2rem;
+}
+
+/* ============ EXPERIENCIA =========== */
+
+#experience ul {
+  margin-top: 2rem;
+  font-size: 1.76rem;
+}
+#experience ul li {
+  padding-block: 1rem;
+  margin-block: 0.5rem;
+  background-color: var(--bg-light);
+  border-bottom: 0.3rem solid var(--bg-dark);
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+#experience ul li:hover,
+#experience ul li.active {
+  background-color: var(--bg-dark);
+  border-color:white;
+  font-weight: 600;
+  color: var(--bg-light);
+}
+
+#experience .experiencia-descricao {
+  margin-top: 2rem;
+  position: relative;
+}
+
+#experience .experiencia-descricao h4{
+  font-size: 2.5rem;
+}
+#experience .experiencia-descricao-local{
+  font-size: 1.4rem;
+  padding-block: 1.5rem;
+  color: var(--bg-dark);
+  font-weight: 600;
+}
+
+#experience .experiencia-descricao div {
+  display: none;
+}
+
+#experience .experiencia-descricao div.active {
+  display: block;
+}
+
+#experience .experiencia-descricao div.active.show-right {
+  animation: 0.5s forwards show-right;
 }
 
 /* ============ FOOTER para DESKTOP e MOBILE =========== */

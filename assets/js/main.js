@@ -72,20 +72,6 @@ function closeMenu() {
   document.body.classList.remove('menu-expanded')
 }
 
-ScrollReveal({
-  origin: 'top',
-  distance: '30px',
-  duration: 700,
-  reset: true
-}).reveal(`
-  #home,
-  #about,
-  #experience,
-  #project,
-  #technologies,
-  #contact,
-  #footer`)
-
 // Efeito de Máquina de Escrever com JavaScript
 function typeWriter(element) {
   // Estou pegando o texto dentro desse elemento passado e com o split eu separo as letras, formando um array
@@ -227,3 +213,37 @@ function initProject() {
   }
 }
 initProject()
+
+ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duration: 700,
+  reset: true
+}).reveal(`
+  #home,
+  #home .wrapper,
+  #home .wrapper header,
+  #home .wrapper .content,
+  #about,
+  #about .wrapper,
+  #about .wrapper header,
+  #about .wrapper .content,
+  #experience,
+  #experience .wrapper,
+  #experience .wrapper header,
+  #experience .wrapper .content,
+  #projects,
+  #projects .wrapper,
+  #projects .wrapper header,
+  #projects .wrapper .content,
+  #projects .wrapper .content .project,
+  #technologies,
+  #technologies .wrapper,
+  #technologies .wrapper header,
+  #technologies .wrapper .content,
+  #contact,
+  #contact .wrapper,
+  #contact .wrapper header,
+  #contact .wrapper .content,
+  #footer,
+  #footer .wrapper`)

@@ -21,8 +21,7 @@ body {
   text-align: center;
   /* Não conta a largura da barra */
   /* overflow: overlay; */
-  /* 
-  background-color: var(--bg-light); */
+  /* background: var(--primary-color); */
 }
 
 ul {
@@ -51,10 +50,6 @@ section {
   margin-left: auto; */
   margin-inline: auto;
   padding-inline: 2.4rem;
-}
-
-.btn:nth-child(1) {
-  margin-bottom: 1rem;
 }
 
 .btn {
@@ -100,12 +95,16 @@ section {
   transition: right 0.2s ease-in-out;
 }
 
+.first-btn {
+  margin-bottom: 1rem;
+}
+
 .bg-dark {
   background: var(--bg-dark);
   color: var(--bg-light);
 }
 
-.bg-dark .btn{
+.bg-dark .btn {
   background: var(--bg-dark);
   border: 0.2rem solid var(--bg-light);
   color: var(--bg-light);
@@ -125,13 +124,12 @@ section {
   fill: var(--bg-dark);
 }
 
-
 .bg-light {
   background-color: var(--bg-light);
   color: var(--bg-dark);
 }
 
-.bg-light .btn{
+.bg-light .btn {
   background: var(--bg-light);
   border: 0.2rem solid var(--bg-dark);
   color: var(--bg-dark);
@@ -140,7 +138,6 @@ section {
 .bg-light .btn::before {
   background-color: var(--bg-dark);
 }
-
 
 .bg-light .btn path {
   fill: var(--bg-dark);
@@ -163,15 +160,25 @@ section {
   color: var(--primary-color);
 }
 
-.content{
-  word-wrap:break-word;
+.wrapper,
+.content {
+  word-wrap: break-word;
+}
+#projects .project.active-project,
+#projects .project:hover,
+#technologies .skill-list .skill-list-item:hover {
+  transform: translateY(-0.8rem);
+}
+
+section header h2,
+section header h4 {
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
 }
 
 section header h4 {
   font-size: 1.4rem;
   line-height: 150%;
-  letter-spacing: 0.08rem;
-  text-transform: uppercase;
 }
 
 section header h2 {
@@ -194,11 +201,6 @@ header h2::before {
 
 header h2::after {
   content: '}';
-}
-
-section header h1 {
-  font-size: 3.4rem;
-  line-height: 130%;
 }
 
 /* =============== KEYFRAMES ================== */
@@ -274,4 +276,10 @@ button.open-menu path,
 
 #navigation.scroll button.open-menu path {
   stroke: white;
+}
+
+#projects .btn-github svg,
+#home .btn-github svg {
+  width: 3rem;
+  height: 3rem;
 }

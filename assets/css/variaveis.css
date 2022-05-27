@@ -22,5 +22,5 @@
 
   --nav-height: 7.2rem;
   
-  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --shadow: hsla(0, 0%, 0%, 0.16) 0px 10px 36px 0px, hsla(6, 100%, 86%, 0.06) 0px 0px 0px 1px;
 }

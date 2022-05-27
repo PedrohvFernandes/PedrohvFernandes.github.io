@@ -8,7 +8,7 @@ function onScroll() {
   activateMenuAtCurrentSection(home)
   activateMenuAtCurrentSection(about)
   activateMenuAtCurrentSection(experience)
-  activateMenuAtCurrentSection(project)
+  activateMenuAtCurrentSection(projects)
   activateMenuAtCurrentSection(technologies)
   activateMenuAtCurrentSection(contact)
 }
@@ -149,8 +149,8 @@ function initTabNav() {
   const tabContent = document.querySelectorAll(
     "[data-tab='content-experiencias'] div"
   )
-  console.log(tabContent)
-  console.log(tabContent.length)
+  // console.log(tabContent)
+  // console.log(tabContent.length)
   // Se os vetores tiverem tamanho coloca uma classe active no primeiro elemento do menu e do vetor que contem as div ao iniciar a aplicação
   if (tabMenu.length && tabContent.length) {
     tabMenu[0].classList.add('active')
@@ -166,7 +166,7 @@ function initTabNav() {
       })
       //Colocando no indice passado pelo metodo a classe active e a Direção que a div vai aparecer, ou seja show right, porque no tabContent que é a div tem o data-anime(Atributo que a gente cria e que pode ser pego com o dataset) que tem showright que é adicionado como uma classe
       const direction = tabContent[index].dataset.anime
-      console.log(direction)
+      // console.log(direction)
       tabContent[index].classList.add('active', direction)
 
       // De acordo com o indice selecionado no menu, a classe active é adicionada ao menu
@@ -184,4 +184,46 @@ function initTabNav() {
     })
   }
 }
-initTabNav();
+initTabNav()
+
+function initProject() {
+  const tabHeader = document.querySelectorAll(
+    "[data-tab='content-projects'] .project h3"
+  )
+  // console.log(tabHeader)
+  // console.log(tabHeader.length)
+
+  const tabContent = document.querySelectorAll(
+    "[data-tab='content-projects'] .project .details-projects"
+  )
+  const tabSection = document.querySelectorAll(
+    "[data-tab='section-projects'] .project"
+  )
+  console.log(tabSection)
+  console.log(tabSection.length)
+
+  if (tabContent.length) {
+    tabContent[0].classList.add('active-project')
+    tabSection[0].classList.add('active-project')
+
+    function activeProject(index) {
+      tabContent.forEach(content => {
+        content.classList.remove('active-project')
+      })
+      const direction = tabContent[index].dataset.anime
+      tabContent[index].classList.add('active-project', direction)
+
+      tabSection.forEach(content => {
+        content.classList.remove('active-project')
+      })
+      tabSection[index].classList.add('active-project')
+    }
+
+    tabHeader.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        activeProject(index)
+      })
+    })
+  }
+}
+initProject()

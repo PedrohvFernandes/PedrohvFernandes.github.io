@@ -185,6 +185,7 @@ body.menu-expanded nav .close-menu {
 
 #home h1 {
   font-size: 3rem;
+  line-height: 130%;
   margin-bottom: 1rem;
   color: var(--headline);
 }
@@ -203,15 +204,6 @@ body.menu-expanded nav .close-menu {
 
 #home .emoji {
   font-size: 3.2rem;
-}
-
-#home .btn {
-  margin-inline: auto;
-}
-
-#home .btn-github svg {
-  width: 3rem;
-  height: 3rem;
 }
 
 #home .col-b img {
@@ -236,7 +228,7 @@ body.menu-expanded nav .close-menu {
 
 #home .scroll svg {
   animation: scroll-down 3s infinite forwards;
-  width:1.8rem;
+  width: 1.8rem;
   fill: var(--bg-dark);
 }
 
@@ -266,7 +258,7 @@ body.menu-expanded nav .close-menu {
   opacity: 1;
 }
 
-#about .content p{
+#about .content p {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -290,7 +282,7 @@ body.menu-expanded nav .close-menu {
 #experience ul li:hover,
 #experience ul li.active {
   background-color: var(--bg-dark);
-  border-color:white;
+  border-color: white;
   font-weight: 600;
   color: var(--bg-light);
 }
@@ -300,17 +292,18 @@ body.menu-expanded nav .close-menu {
   position: relative;
 }
 
-#experience .experiencia-descricao h4{
+#experience .experiencia-descricao h4 {
   font-size: 3rem;
 }
-#experience .experiencia-descricao-local{
+
+#experience .experiencia-descricao-local {
   font-size: 1.6rem;
   padding-block: 1.5rem;
   color: var(--bg-dark);
   font-weight: 600;
 }
 
-#experience .experiencia-descricao-local-dois{
+#experience .experiencia-descricao-local-dois {
   font-size: 2rem;
 }
 
@@ -326,6 +319,114 @@ body.menu-expanded nav .close-menu {
   animation: 0.5s forwards show-right;
 }
 
+/* ============ PROJETOS =========== */
+
+#projects .wrapper {
+  margin: 0;
+  width: auto;
+}
+
+#projects h2 {
+  margin-bottom: 3rem;
+}
+
+#projects .content {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 2rem;
+}
+
+#projects .content h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border-bottom: 0.1rem solid;
+  cursor: pointer;
+}
+
+#projects .project {
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s linear;
+  margin-inline: auto;
+  width: 100%;
+}
+
+#projects .project.active-project{
+
+}
+
+#projects .project .details-projects {
+  display: none;
+}
+
+#projects .project .details-projects.active-project {
+  display: block;
+}
+
+#projects .project .details-projects.active-project.show-down {
+  animation: 0.5s forwards show-down;
+}
+
+#projects .project p {
+  text-align: start;
+}
+
+#projects .project .project-stack {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.project-stack .project-stack-item {
+  margin: 0.5rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  border-bottom: 0.1rem solid;
+}
+
+/* ============ TECNOLOGIAS tanto para desktop e mobile =========== */
+
+#technologies .skill-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#technologies .skill-list .skill-list-item {
+  display: block;
+  color: var(--bg-light);
+  border-bottom: 0.1rem solid var(--bg-light);
+  box-shadow: rgb(0 0 0 / 15%) 0px 3px 3px 0px;
+  background-color: var(--bg-dark);
+
+  margin: 0.5rem;
+  padding: 0.8em 1.4em;
+  
+  font-weight: 600;
+  text-transform: uppercase;
+
+  transition: transform 0.2s ease-in-out;
+}
+
+/* ============ Contatos =========== */
+#contact header h4{
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+#contact .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#contact .btn-do-lado {
+  margin: 1rem 1rem;
+}
 /* ============ FOOTER para DESKTOP e MOBILE =========== */
 
 footer {
@@ -366,6 +467,7 @@ footer .text-primary:hover {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
+  z-index: 2;
 
   opacity: 0;
   visibility: hidden;
@@ -378,4 +480,34 @@ footer .text-primary:hover {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+/* RESPONSIVE DESKTOP */
+
+@media (min-width: 1024px) {
+}
+@media (min-width: 480px) {
+  /* Projetos */
+  #projects .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    gap: 2rem;
+  }
+
+  #projects .project {
+    width: min(50rem, 100%);
+  }
+
+  #projects .project p {
+    text-align: inherit;
+  }
+
+  /* Contatos */
+  #contact .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
 }

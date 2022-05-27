@@ -163,6 +163,10 @@ section {
   color: var(--primary-color);
 }
 
+.content{
+  word-wrap:break-word;
+}
+
 section header h4 {
   font-size: 1.4rem;
   line-height: 150%;

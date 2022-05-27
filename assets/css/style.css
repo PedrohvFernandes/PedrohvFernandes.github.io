@@ -259,10 +259,6 @@ body.menu-expanded nav .close-menu {
   border-left: 0.5rem solid var(--bg-light);
 }
 
-#about .content{
-  word-wrap:break-word;
-}
-
 #about .brazil {
   font-size: 2.5rem;
   font-weight: 700;
@@ -305,13 +301,17 @@ body.menu-expanded nav .close-menu {
 }
 
 #experience .experiencia-descricao h4{
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 #experience .experiencia-descricao-local{
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding-block: 1.5rem;
   color: var(--bg-dark);
   font-weight: 600;
+}
+
+#experience .experiencia-descricao-local-dois{
+  font-size: 2rem;
 }
 
 #experience .experiencia-descricao div {
@@ -354,6 +354,7 @@ footer h4 {
 
 footer .text-primary {
   transition: 0.5s all;
+  font-weight: 700;
 }
 
 footer .text-primary:hover {
@@ -364,7 +365,7 @@ footer .text-primary:hover {
 #backToTopButton {
   position: fixed;
   bottom: 1rem;
-  right: 2.5rem;
+  right: 1rem;
 
   opacity: 0;
   visibility: hidden;

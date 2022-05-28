@@ -625,6 +625,9 @@ footer .text-primary:hover {
   /* Projetos */
   #projects .content {
     display: grid;
+    /* 
+    As unidades em e ex dependem da fonte e podem ser diferentes para cada elemento no documento. em é, simplesmente, o tamanho da fonte. Em um elemento com a fonte de 2in, 1em será, portanto, 2in. Empressando tamanhos, como margins e paddings, com em significa que eles são relativos ao tamanho da fonte e se o usuário tem uma fonte grande (ex. uma tela grande) ou uma fonte pequena (ex. dispositivo handheld) , os tamanhos serão proporcionais. Declarações como 'text-indent: 1.5em' e 'margin: 1em' são extremamente comuns em CSS.
+    */
     grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
     gap: 2rem;
   }

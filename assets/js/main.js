@@ -214,6 +214,12 @@ function initProject() {
 }
 initProject()
 
+function anoAtual() {
+  let data = new Date()
+  document.getElementById('anoAtual').innerHTML = data.getFullYear();
+}
+anoAtual();
+
 ScrollReveal({
   origin: 'top',
   distance: '30px',

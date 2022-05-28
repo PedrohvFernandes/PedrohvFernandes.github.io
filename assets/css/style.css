@@ -34,10 +34,6 @@ nav#navigation .menu ul li a {
   opacity: 0.7;
 }
 
-nav#navigation .menu li a {
-  transition: opacity 0.4s;
-}
-
 nav#navigation .menu li a.active {
   opacity: 1;
   font-weight: 700;
@@ -181,6 +177,7 @@ body.menu-expanded nav .close-menu {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  padding-top: calc(4.1rem + var(--nav-height));
 }
 
 #home h1 {
@@ -204,10 +201,6 @@ body.menu-expanded nav .close-menu {
 
 #home .emoji {
   font-size: 3.2rem;
-}
-
-#home .col-b img {
-  display: none;
 }
 
 #home .scroll {
@@ -352,10 +345,6 @@ body.menu-expanded nav .close-menu {
   width: 100%;
 }
 
-#projects .project.active-project{
-
-}
-
 #projects .project .details-projects {
   display: none;
 }
@@ -388,7 +377,7 @@ body.menu-expanded nav .close-menu {
 
 /* ============ TECNOLOGIAS tanto para desktop e mobile =========== */
 
-#technologies .skill-list{
+#technologies .skill-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -404,7 +393,7 @@ body.menu-expanded nav .close-menu {
 
   margin: 0.5rem;
   padding: 0.8em 1.4em;
-  
+
   font-weight: 600;
   text-transform: uppercase;
 
@@ -412,7 +401,7 @@ body.menu-expanded nav .close-menu {
 }
 
 /* ============ Contatos =========== */
-#contact header h4{
+#contact header h4 {
   margin-top: 2rem;
   font-size: 2rem;
 }
@@ -485,6 +474,152 @@ footer .text-primary:hover {
 /* RESPONSIVE DESKTOP */
 
 @media (min-width: 1024px) {
+  /*=== NAVIGATION =================================*/
+  /* reset */
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    font-size: initial;
+    font-weight: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+    filter: initial;
+  }
+
+  nav#navigation .close-menu,
+  nav#navigation .open-menu {
+    display: none;
+  }
+
+  nav#navigation .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  nav#navigation .menu ul {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  nav#navigation .logo {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  nav#navigation .menu ul li a {
+    color: var(--primary-color);
+    opacity: 0.7;
+  }
+
+  nav#navigation .menu a.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.4rem;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 4rem;
+
+    color: var(--primary-color);
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  nav#navigation .menu a.button:hover {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+  }
+
+  nav#navigation.scroll .menu ul li a {
+    color: var(--brand-light-2);
+  }
+
+  nav#navigation.scroll .menu a.button {
+    border-color: white;
+    color: white;
+  }
+
+  nav#navigation .menu li a.active,
+  nav#navigation .menu li a:hover {
+    opacity: 1;
+    font-weight: 700;
+  }
+
+  nav#navigation .menu li a::after {
+    background-color: var(--primary-color);
+  }
+
+  nav#navigation.scroll .menu li a::after {
+    background-color: white;
+  }
+
+  nav#navigation .menu li a.active::after,
+  nav#navigation .menu li a:hover::after {
+    padding-inline: 0.8rem;
+    width: 100%;
+  }
+
+  nav#navigation.scroll .menu li a.active,
+  nav#navigation.scroll .menu li a:hover {
+    opacity: 1;
+  }
+
+  nav#navigation.scroll .menu a.button.active,
+  nav#navigation.scroll .menu a.button:hover {
+    background-color: var(--primary-color);
+    filter: brightness(1.2);
+    border: none;
+  }
+
+  /*=== HOME =================================*/
+  #home {
+    padding-top: var(--nav-height);
+  }
+
+  #home h1 {
+    font-size: 4.5rem;
+  }
+
+  #home h4 {
+    font-size: 3rem;
+  }
+
+  #home .btn {
+    font-size: 1.6rem;
+  }
+
+  #home .scroll p {
+    font-size: 1.8rem;
+  }
+
+  #about .wrapper,
+  #experience .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'A B';
+  }
+
+  #about .col-a,
+  #experience .col-a {
+    align-self: center;
+  }
+
+  #experience {
+    display: flex;
+    align-items: center;
+  }
 }
 @media (min-width: 480px) {
   /* Projetos */

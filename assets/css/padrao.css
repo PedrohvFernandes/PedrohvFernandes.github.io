@@ -264,6 +264,10 @@ header h2::after {
   color: var(--primary-color-two);
 }
 
+nav#navigation .menu li a {
+  transition: opacity 0.4s;
+}
+
 body.menu-expanded #navigation h3 .logo,
 #navigation.scroll h3 .logo {
   color: white;
@@ -282,4 +286,34 @@ button.open-menu path,
 #home .btn-github svg {
   width: 3rem;
   height: 3rem;
+}
+
+/* Responsive */
+@media (min-width: 1024px) {
+  body {
+    overflow: auto;
+  }
+
+  #navigation .wrapper,
+  #home .wrapper,
+  #about .wrapper,
+  #experience .wrapper,
+  #contact .wrapper {
+    width: min(112rem, 100%);
+  }
+
+  .col-a {
+    grid-area: A;
+  }
+
+  .col-b {
+    grid-area: B;
+  }
+
+  section header h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
+  /* Menu */
 }

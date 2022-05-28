@@ -251,5 +251,4 @@ ScrollReveal({
   #contact .wrapper,
   #contact .wrapper header,
   #contact .wrapper .content,
-  #footer,
-  #footer .wrapper`)
+  #footer`)

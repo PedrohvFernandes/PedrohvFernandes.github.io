@@ -72,22 +72,55 @@ function closeMenu() {
   document.body.classList.remove('menu-expanded')
 }
 
-// Efeito de Máquina de Escrever com JavaScript
-function typeWriter(element) {
-  // Estou pegando o texto dentro desse elemento passado e com o split eu separo as letras, formando um array
-  const textArray = element.innerHTML.split('')
-  // Deixo meu texto vazio
-  element.innerHTML = ''
-  // Percorro todo meu array, e com isso agora consigo manipular cada letra com o foreach e cada letra tem um indice no vetor
-  textArray.forEach((letter, i) => {
-    // Cada letra tem um tempo de delay, que é o tempo que ela ficará escrita
-    // Pra cada letra ele adiciona uma apos a outra
-    setTimeout(() => (element.innerHTML += letter), 90 * i) // a primeira letra é 0 -> 75 * 0 = 0, a segunda é 75 * 1 = 75, a terceira é 75 * 2 = 150, etc
-  })
-}
+// // Efeito de Máquina de Escrever com JavaScript
+// function typeWriter(element) {
+//   // Estou pegando o texto dentro desse elemento passado e com o split eu separo as letras, formando um array
+//   const textArray = element.innerHTML.split('')
+//   // Deixo meu texto vazio
+//   element.innerHTML = ''
+//   // Percorro todo meu array, e com isso agora consigo manipular cada letra com o foreach e cada letra tem um indice no vetor
+//   textArray.forEach((letter, i) => {
+//     // Cada letra tem um tempo de delay, que é o tempo que ela ficará escrita
+//     // Pra cada letra ele adiciona uma apos a outra
+//     setTimeout(() => (element.innerHTML += letter), 90 * i) // a primeira letra é 0 -> 75 * 0 = 0, a segunda é 75 * 1 = 75, a terceira é 75 * 2 = 150, etc
+//   })
+// }
 
+//  //Pedro Henrique    -> No span tem que ter espaço pra atrasar
+// const spanTitle = document.querySelector('#spanTitle')
+// typeWriter(spanTitle)
+
+// // https://www.youtube.com/watch?v=DnBn2R426O8
 const spanTitle = document.querySelector('#spanTitle')
-typeWriter(spanTitle)
+// Cada palavra digitada dentro do spanTitle
+const messages = ["Pedro Henrique        ", "Desenvolvedor Web           ", "Front-Ender         "]
+
+let messageIndex = 0;
+let charIndex = 0;
+let currentMessage = '';
+let currentCharacters = '';
+
+const type = () => {
+  const shouldTypeFirstMessage = messageIndex === messages.length
+  if(shouldTypeFirstMessage){
+    messageIndex = 0
+  }
+  currentMessage = messages[messageIndex]
+  currentCharacters = currentMessage.slice(0, charIndex++)
+  spanTitle.textContent = currentCharacters
+
+  const shouldChangeMessageToBeTyped = 
+    currentCharacters.length === currentMessage.length
+
+  if(shouldChangeMessageToBeTyped){
+    messageIndex ++
+    charIndex = 0
+  }
+}
+// Repetindo a função em um intervalo de tempo, a cada 200 milisegundos
+setInterval(type, 150)
+
+
 
 // function minhaIdade() {
 //   let data = new Date()

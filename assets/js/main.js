@@ -93,34 +93,47 @@ function closeMenu() {
 // // https://www.youtube.com/watch?v=DnBn2R426O8
 const spanTitle = document.querySelector('#spanTitle')
 // Cada palavra digitada dentro do spanTitle
-const messages = ["Pedro Henrique        ", "Desenvolvedor Web           ", "Front-Ender         "]
+const messages = [
+  'Pedro Henrique        ',
+  'Desenvolvedor Web           ',
+  'Front-Ender         '
+]
 
-let messageIndex = 0;
-let charIndex = 0;
-let currentMessage = '';
-let currentCharacters = '';
+// Indice das mensagens
+let messageIndex = 0
+// Indice das letras da mensagen
+let charIndex = 0
+// Duas variaveis que vão receber tanto a mensagem e os caracteres da mensagem armazenada no currentMessage um por um
+let currentMessage = ''
+let currentCharacters = ''
 
 const type = () => {
+  // volta pro primeiro texto para não bugar na hora de for passar pro proximo indice inexistente, caso o indice da mensagemIndex for igual ao tamanho da messages
   const shouldTypeFirstMessage = messageIndex === messages.length
-  if(shouldTypeFirstMessage){
+
+  if (shouldTypeFirstMessage) {
     messageIndex = 0
   }
+  // A gente recebe a mensagem atual do array
   currentMessage = messages[messageIndex]
+  // Cada vez que rodar essa função eu recebo os caracters devidos da mensagem, ou seja eu incremento o indice da mensagem
+  // Na primeira rodada o slice recebe 0 e 0 ou seja uma string vazia, na segunda rodada o slice recebe 0 e 1 ou seja p primeira letra da mensagem...
   currentCharacters = currentMessage.slice(0, charIndex++)
+
   spanTitle.textContent = currentCharacters
 
-  const shouldChangeMessageToBeTyped = 
+  // Se o currentCharacters tiver o mesmo tamanho do currentMessage, isso quer dizer que a mensagem já foi completada. porque o currentCharacters vai receber o currentMessage.slice que é um vetor de strings e o currentMessage tem um vetor de mensagem. Tanto o currentCharcters e Currentmessage é de acordo com o indice no momento.
+  const shouldChangeMessageToBeTyped =
     currentCharacters.length === currentMessage.length
 
-  if(shouldChangeMessageToBeTyped){
-    messageIndex ++
+  // Se sim entao eu incremento o indice da mensagem e passo pra proxima mensagem, apagando o texto do spanTitle
+  if (shouldChangeMessageToBeTyped) {
+    messageIndex++
     charIndex = 0
   }
 }
-// Repetindo a função em um intervalo de tempo, a cada 200 milisegundos
+// Repetindo a função em um intervalo de tempo para pegar caracter de um em um da mensagem, a cada 200 milisegundos
 setInterval(type, 150)
-
-
 
 // function minhaIdade() {
 //   let data = new Date()
@@ -249,9 +262,9 @@ initProject()
 
 function anoAtual() {
   let data = new Date()
-  document.getElementById('anoAtual').innerHTML = data.getFullYear();
+  document.getElementById('anoAtual').innerHTML = data.getFullYear()
 }
-anoAtual();
+anoAtual()
 
 ScrollReveal({
   origin: 'top',

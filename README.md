@@ -1,6 +1,6 @@
 # PedrohvFernandes.github.io 📄
 
-## Opa! Seja bem vindo ao meu portfolio, eu sou o Pedro Henrique <img src="https://raw.githubusercontent.com/iampavangandhi/iampavangandhi/master/gifs/Hi.gif" width="30px">
+## Opa! Seja bem vindo ao meu portfolio, eu sou o Pedro Henrique
    
 ### Sobre o conteudo do meu portfolio:
 

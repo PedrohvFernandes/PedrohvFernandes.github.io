@@ -167,7 +167,7 @@ section {
 #projects .project.active-project,
 #projects .project:hover,
 #technologies .skill-list .skill-list-item:hover {
-  transform: translateY(-0.8rem);
+  transform: translateY(-0.8rem) !important;
 }
 
 section header h2,

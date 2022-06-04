@@ -339,10 +339,10 @@ body.menu-expanded nav .close-menu {
 
 #projects .project {
   padding: 2rem;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s linear;
+  /* transition: transform 0.2s linear; */
   margin-inline: auto;
   width: 100%;
+  box-shadow: var(--shadow);
 }
 
 #projects .project .details-projects {
@@ -351,6 +351,8 @@ body.menu-expanded nav .close-menu {
 
 #projects .project .details-projects.active-project {
   display: block;
+  overflow-y: auto;
+  height: 50vh;
 }
 
 #projects .project .details-projects.active-project.show-down {
@@ -620,6 +622,13 @@ footer .text-primary:hover {
     display: flex;
     align-items: center;
   }
+  #projects .project {
+    box-shadow: none;
+  }
+  #projects .project.active-project {
+    box-shadow: var(--shadow);
+  }
+  
 }
 @media (min-width: 480px) {
   /* Projetos */

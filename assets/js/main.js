@@ -3,7 +3,7 @@ import showBackToTopButtonOnScroll from './modules/showBackToTopButtonOnScroll.j
 import activateMenuAtCurrentSection from './modules/activateMenuAtCurrentSection.js'
 import typeWriter from './modules/typeWriter.js'
 import {calculateAge, currentYear} from './modules/calculateDates.js'
-import {initTabNav, initProject} from './modules/showSomething.js'
+import {initTabNav, initProject, initShowTechnologyDescription} from './modules/showSomething.js'
 import scrollReveal from './modules/scrollReveal.js'
 
 window.addEventListener('scroll', onScroll)
@@ -26,4 +26,5 @@ calculateAge('05/12/2001');
 initTabNav();
 initProject();
 currentYear();
-scrollReveal();
+initShowTechnologyDescription();
+scrollReveal;

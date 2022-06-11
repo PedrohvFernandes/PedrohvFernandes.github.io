@@ -379,11 +379,14 @@ body.menu-expanded nav .close-menu {
 
 /* ============ TECNOLOGIAS tanto para desktop e mobile =========== */
 
+#technologies h4{
+  margin-top: 2rem;
+}
 #technologies .skill-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 2rem;
+  margin-block: 2rem;
 }
 
 #technologies .skill-list .skill-list-item {
@@ -400,6 +403,11 @@ body.menu-expanded nav .close-menu {
   text-transform: uppercase;
 
   transition: transform 0.2s ease-in-out;
+
+  cursor: pointer;
+}
+#technologies #descricaoTecnologia.show-right {
+  animation: 0.5s forwards show-right;
 }
 
 /* ============ Contatos =========== */
@@ -627,6 +635,13 @@ footer .text-primary:hover {
   }
   #projects .project.active-project {
     box-shadow: var(--shadow);
+  }
+
+  #technologies h4{
+    font-size: 2rem;
+  }
+  #technologies #descricaoTecnologia {
+    font-size: 1.8rem;
   }
   
 }

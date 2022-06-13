@@ -8,18 +8,40 @@
   background: var(--primary-color);
   color: var(--bg-light);
 }
-  
-.details-projects::-webkit-scrollbar {
+
+/* Config de tamanho */
+.details-projects::-webkit-scrollbar,
+.descricao-tecnologia::-webkit-scrollbar {
   width: 0.5rem; /* width of the entire scrollbar */
 }
 
+.details-projects::-webkit-scrollbar-track,
+.descricao-tecnologia::-webkit-scrollbar-track {
+  border-radius: 0.5rem;
+}
+
+.details-projects::-webkit-scrollbar-thumb,
+.descricao-tecnologia::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem; /* roundness of the scroll thumb */
+  border: 0.3rem solid; /* creates padding around scroll thumb */
+}
+
+/* Config de cores */
+
 .details-projects::-webkit-scrollbar-track {
   background: var(--primary-color); /* color of the tracking area */
-  border-radius: 0.5rem;
 }
 
 .details-projects::-webkit-scrollbar-thumb {
   background: var(--primary-color); /* color of the scroll thumb */
-  border-radius: 0.5rem; /* roundness of the scroll thumb */
-  border: 0.3rem solid var(--bg-light); /* creates padding around scroll thumb */
+  border-color: var(--bg-light); /* creates padding around scroll thumb */
+}
+
+.descricao-tecnologia::-webkit-scrollbar-track {
+  background: var(--bg-light); /* color of the tracking area */
+}
+
+.descricao-tecnologia::-webkit-scrollbar-thumb {
+  background: var(--bg-light); /* color of the scroll thumb */
+  border-color: var(--primary-color); /* creates padding around scroll thumb */
 }

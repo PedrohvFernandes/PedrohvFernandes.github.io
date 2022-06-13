@@ -406,6 +406,10 @@ body.menu-expanded nav .close-menu {
 
   cursor: pointer;
 }
+.descricao-tecnologia{
+  height: 25vh;
+  overflow-y: auto;
+}
 #technologies #descricaoTecnologia.show-right {
   animation: 0.5s forwards show-right;
 }

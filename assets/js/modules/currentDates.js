@@ -7,7 +7,21 @@
 // }
 // minhaIdade()
 
-export function calculateAge(dataNasc) {
+function verificarIdade(mesAtual, mesNasc, idade, diaNasc){
+  //Se mes atual for menor que o nascimento, nao fez aniversario ainda;
+  if (mesAtual < mesNasc) {
+    return --idade
+  } 
+  //Se estiver no mes do nascimento, verificar o dia
+  if (mesAtual === mesNasc) {
+    if (new Date().getDate() < diaNasc) {
+      //Se a data atual for menor que o dia de nascimento ele ainda nao fez aniversario
+      return --idade
+    }
+  }
+}
+
+export function currentAge(dataNasc) {
   // Pegando uma data nova
   let dataAtual = new Date()
   // Pegando o ano atual
@@ -22,19 +36,8 @@ export function calculateAge(dataNasc) {
   let idade = anoAtual - anoNasc
   // A gente pega o mes + 1 porque o date pega mes anterior ao atual
   let mesAtual = dataAtual.getMonth() + 1
-  //Se mes atual for menor que o nascimento, nao fez aniversario ainda;
-  if (mesAtual < mesNasc) {
-    idade--
-  } else {
-    //Se estiver no mes do nascimento, verificar o dia
-    if (mesAtual === mesNasc) {
-      if (new Date().getDate() < diaNasc) {
-        //Se a data atual for menor que o dia de nascimento ele ainda nao fez aniversario
-        idade--
-      }
-    }
-  }
-  document.getElementById('anos').innerHTML = idade
+  const idadeAtual = verificarIdade(mesAtual, mesNasc, idade, diaNasc)
+  document.getElementById('anos').innerHTML = idadeAtual;
 }
 
 export function currentYear() {

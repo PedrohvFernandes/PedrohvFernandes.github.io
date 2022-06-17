@@ -1,30 +1,31 @@
-import showNavOnScroll from './modules/showNavOnScroll.js'
-import showBackToTopButtonOnScroll from './modules/showBackToTopButtonOnScroll.js'
-import activateMenuAtCurrentSection from './modules/activateMenuAtCurrentSection.js'
-import typeWriter from './modules/typeWriter.js'
-import {calculateAge, currentYear} from './modules/calculateDates.js'
-import {initTabNav, initProject, initShowTechnologyDescription} from './modules/showSomething.js'
-import scrollReveal from './modules/scrollReveal.js'
+import {showNavOnScroll, showBackToTopButtonOnScroll} from './modules/showSomething.js';
+import activateMenuAtCurrentSection from './modules/activateMenuAtCurrentSection.js';
+import {initTabNav, initProject, initShowTechnologyDescription} from './modules/initSomething.js';
+import {currentAge, currentYear} from './modules/currentDates.js';
+import typeWriter from './modules/typeWriter.js';
 
-window.addEventListener('scroll', onScroll)
+// Api para scroll
+import scrollRevealApi from './modules/scrollRevealApi.js';
 
-onScroll()
+window.addEventListener('scroll', onScroll);
+
+onScroll();
 function onScroll() {
-  showNavOnScroll()
-  showBackToTopButtonOnScroll()
+  showNavOnScroll();
+  showBackToTopButtonOnScroll();
 
-  activateMenuAtCurrentSection(home)
-  activateMenuAtCurrentSection(about)
-  activateMenuAtCurrentSection(experience)
-  activateMenuAtCurrentSection(projects)
-  activateMenuAtCurrentSection(technologies)
-  activateMenuAtCurrentSection(contact)
+  activateMenuAtCurrentSection(home);
+  activateMenuAtCurrentSection(about);
+  activateMenuAtCurrentSection(experience);
+  activateMenuAtCurrentSection(projects);
+  activateMenuAtCurrentSection(technologies);
+  activateMenuAtCurrentSection(contact);
 }
 
-typeWriter();
-calculateAge('05/12/2001');
 initTabNav();
 initProject();
-currentYear();
 initShowTechnologyDescription();
-scrollReveal;
+currentAge('05/12/2001');
+currentYear();
+typeWriter();
+scrollRevealApi;
